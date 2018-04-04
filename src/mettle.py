@@ -10,6 +10,7 @@ from mettle_config import MettleConfig
 class Mettle:
 
     def __init__(self):
+        # will the db be remade everytime this is run?
         self.config = MettleConfig()
         self.db = self.autheticate()
         self.firebase = None
@@ -17,16 +18,6 @@ class Mettle:
         self.listener = None
         self.email = self.config_email()
         # self.model_loader = ModelMethods()
-
-    def stream_handler(self, message):
-        info = list(message['data'].keys())[0].split('/')
-        type = info[-1]
-        id = info[0]
-        if type == "actual" or type == "category":
-            pass
-        else:
-            classification = self.classify(message)
-            self.update({id + "/prediction" : classification})
 
     def config_db(self):
         return {
@@ -37,9 +28,11 @@ class Mettle:
         }
 
     def config_email(self):
-        config = EmailConfig()
-        mail = imaplib.IMAP4_SSL(config.STMP_SERVER)
-        mail.login(config.FROM_EMAIL, config.FROM_PWD)
+        """
+        configures email IMAP authentication
+        """
+        mail = imaplib.IMAP4_SSL(self.config.STMP_SERVER)
+        mail.login(self.config.FROM_EMAIL, self.config.FROM_PWD)
         mail.select('inbox')
         type, data = mail.search(None, 'ALL')
         mail_ids = data[0]
@@ -52,7 +45,7 @@ class Mettle:
                 msg = email.message_from_string(response[1].decode())
                 email_subject = msg['subject']
                 email_from = msg['from']
-                for message_data in msg.getpayload():
+                for message_data in msg.get_payload():
                     print(message_data)
         return
 
@@ -60,10 +53,12 @@ class Mettle:
         return
 
     def autheticate(self):
+        """
+        Handles authentication and connection to firebaseDB
+        """
         self.firebase = pyrebase.initialize_app(self.config_db())
         self.auth = self.firebase.auth()
-        # HIDE THIS LINE LMAO
-        user = self.auth.sign_in_with_email_and_password(self.config.db_pwd, self.config.db_pwd)
+        user = self.auth.sign_in_with_email_and_password(self.config.db_email, self.config.db_pwd)
         self.db = self.firebase.database()
         return self.db
 
@@ -79,7 +74,17 @@ class Mettle:
             stream_handler=self.stream_handler,
         )
 
-    def process(self, ticket):
+    def stream_handler(self, message):
+        info = list(message['data'].keys())[0].split('/')
+        type = info[-1]
+        id = info[0]
+        if type == "actual" or type == "category":
+            pass
+        else:
+            classification = self.classify(message)
+            self.update({id + "/prediction" : classification})
+
+    def process_message(self, ticket):
         pass
 
 
