@@ -1,5 +1,5 @@
 import csv
-from database import Mettle
+from mettle import Mettle
 
 file = 'test.csv'
 

@@ -1,5 +1,9 @@
 import pyrebase
-import abc
+import smtplib
+import time
+import imaplib
+import email
+from email_config import EmailConfig
 # from model_loader import ModelMethods()
 
 
@@ -9,6 +13,7 @@ class Mettle:
         self.firebase = None
         self.auth = None
         self.listener = None
+        self.email = self.config_email()
         # self.model_loader = ModelMethods()
 
     def stream_handler(self, message):
@@ -20,7 +25,6 @@ class Mettle:
         else:
             classification = self.classify(message)
             self.update({id + "/prediction" : classification})
-            print(id)
 
     def config(self):
         return {
@@ -29,6 +33,23 @@ class Mettle:
             "databaseURL": "https://mlticket-6a2a8.firebaseio.com",
             "storageBucket": "",
         }
+
+    def config_email(self):
+        config = EmailConfig()
+        mail = imaplib.IMAP4_SSL(config.STMP_SERVER)
+        mail.login(config.FROM_EMAIL, config.FROM_PWD)
+        mail.select('inbox')
+        type, data = mail.search(None, 'ALL')
+        mail_ids = data[0]
+        id_list = mail_ids.split()
+        first_email_id = int(id_list[0])
+        latest_email_id = int(id_list[-1])
+        type, data = mail.fetch(str.encode(str(latest_email_id)), '(RFC822)')
+
+
+
+
+        return
 
     def read_emails(self):
         return
@@ -53,11 +74,10 @@ class Mettle:
         )
 
     def process(self, ticket):
-
-
+        pass
 
 
 if __name__ == "__main__":
-    database = Mettle()
-    database.add({""})
-    database.listen()
+    mettle = Mettle()
+
+

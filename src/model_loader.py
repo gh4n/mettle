@@ -9,7 +9,7 @@ class ModelMethods:
         self.embedding_size = 100
         self.seq_len = 15
         self.categories = 7
-        self.deepdive_model = keras.models.load_model('model1.h5')
+        self.deepdive_model = keras.models.load_model('rnn.h5')
 
     def condition_data(self, data):
         print(data)
