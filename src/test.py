@@ -1,9 +1,9 @@
 import csv
-from database import Database
+from database import Mettle
 
 file = 'test.csv'
 
-storage = Database()
+storage = Mettle()
 storage.listen()
 
 with open(file) as f:

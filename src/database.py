@@ -1,22 +1,26 @@
 import pyrebase
+import abc
+# from model_loader import ModelMethods()
 
 
-class Database:
+class Mettle:
     def __init__(self):
         self.db = self.autheticate()
         self.firebase = None
         self.auth = None
         self.listener = None
+        # self.model_loader = ModelMethods()
 
     def stream_handler(self, message):
-        print(message)
-        path = message['data']
-        type = list(path.keys())[0].split('/')[-1]
-        print(type)
-        if type == "actual":
-            print("") # divert to uupdate ticket in place
-        else:
+        info = list(message['data'].keys())[0].split('/')
+        type = info[-1]
+        id = info[0]
+        if type == "actual" or type == "category":
             pass
+        else:
+            classification = self.classify(message)
+            self.update({id + "/prediction" : classification})
+            print(id)
 
     def config(self):
         return {
@@ -26,11 +30,13 @@ class Database:
             "storageBucket": "",
         }
 
+    def read_emails(self):
+        return
+
     def autheticate(self):
         self.firebase = pyrebase.initialize_app(self.config())
         self.auth = self.firebase.auth()
         user = self.auth.sign_in_with_email_and_password('hgrace503@gmail.com', 'hello30')
-        print(user["localId"])
         self.db = self.firebase.database()
         return self.db
 
@@ -48,6 +54,6 @@ class Database:
 
 
 if __name__ == "__main__":
-    database = Database()
+    database = Mettle()
     database.add({""})
     database.listen()
