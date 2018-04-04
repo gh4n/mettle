@@ -3,12 +3,14 @@ import smtplib
 import time
 import imaplib
 import email
-from email_config import EmailConfig
+from mettle_config import MettleConfig
 # from model_loader import ModelMethods()
 
 
 class Mettle:
+
     def __init__(self):
+        self.config = MettleConfig()
         self.db = self.autheticate()
         self.firebase = None
         self.auth = None
@@ -26,7 +28,7 @@ class Mettle:
             classification = self.classify(message)
             self.update({id + "/prediction" : classification})
 
-    def config(self):
+    def config_db(self):
         return {
             "apiKey": "AIzaSyCsWK-fZ8sQIg3ReJjderS58_b_hZSNjmg",
             "authDomain": "mlticket-6a2a8.firebaseapp.com",
@@ -42,22 +44,26 @@ class Mettle:
         type, data = mail.search(None, 'ALL')
         mail_ids = data[0]
         id_list = mail_ids.split()
-        first_email_id = int(id_list[0])
         latest_email_id = int(id_list[-1])
         type, data = mail.fetch(str.encode(str(latest_email_id)), '(RFC822)')
 
-
-
-
+        for response in data:
+            if isinstance(response, tuple):
+                msg = email.message_from_string(response[1].decode())
+                email_subject = msg['subject']
+                email_from = msg['from']
+                for message_data in msg.getpayload():
+                    print(message_data)
         return
 
     def read_emails(self):
         return
 
     def autheticate(self):
-        self.firebase = pyrebase.initialize_app(self.config())
+        self.firebase = pyrebase.initialize_app(self.config_db())
         self.auth = self.firebase.auth()
-        user = self.auth.sign_in_with_email_and_password('hgrace503@gmail.com', 'hello30')
+        # HIDE THIS LINE LMAO
+        user = self.auth.sign_in_with_email_and_password(self.config.db_pwd, self.config.db_pwd)
         self.db = self.firebase.database()
         return self.db
 
