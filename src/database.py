@@ -52,6 +52,10 @@ class Mettle:
             stream_handler=self.stream_handler,
         )
 
+    def process(self, ticket):
+
+
+
 
 if __name__ == "__main__":
     database = Mettle()
