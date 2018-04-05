@@ -54,6 +54,7 @@ class Mettle:
             type = info[-1]
             id = info[0]
             message_str = message['data']['desc']
+            id2 = message['path']
 
             # ticket resolved: archive ticket
             if type == "resolved":
@@ -66,15 +67,16 @@ class Mettle:
             if type == "actual":
                 data = self.db.child("tickets").child(id).get()
                 new_category = data["actual"]
-                self.analytics.incr(new_category)
+                self.incr_corrected(new_category)
 
             # ticket sent to NN to be classified
             else:
-                print("hello")
                 classification = self.model_loader.classify(message_str)
                 print(classification)
-                self.update("tickets", {id + "/prediction" : classification[0]})
-                self.update("tickets", {id + "/confidence": classification[1]})
+                self.db.child("tickets").child(id2).update({'prediction': classification[0]})
+                self.db.child("tickets").child(id2).update({'confidence':float(classification[1])})
+                print('im updating to the id', id2)
+                self.incr_aggr(classification[0])
                 return
         except AttributeError as e:
             print(e)
@@ -103,12 +105,6 @@ class Mettle:
         nc_category += 1
         self.db.child("analytics").child("category_corrected").child(category).update(nc_category)
         return
-
-
-
-
-    def process_message(self, ticket):
-        pass
 
 
 if __name__ == "__main__":
