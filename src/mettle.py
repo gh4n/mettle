@@ -1,8 +1,6 @@
 import pyrebase
-import smtplib
-import time
-import imaplib
-import email
+import string
+import re
 from mettle_config import MettleConfig
 from model_loader import ModelMethods
 
@@ -33,6 +31,7 @@ class Mettle:
         self.auth = self.firebase.auth()
         user = self.auth.sign_in_with_email_and_password(self.config.db_email, self.config.db_pwd)
         self.db = self.firebase.database()
+        print("WELCOME")
         return self.db
 
     def add(self, folder, data):
@@ -67,16 +66,17 @@ class Mettle:
             if type == "actual":
                 data = self.db.child("tickets").child(id).get()
                 new_category = data["actual"]
-                self.incr_corrected(new_category)
+                # self.incr_corrected(new_category)
 
             # ticket sent to NN to be classified
             else:
+                message_str = self.process_message(message_str)
                 classification = self.model_loader.classify(message_str)
-                print(classification)
+                self.db.child("tickets").child(id2).update({'prediction': classification[0]})
                 self.db.child("tickets").child(id2).update({'prediction': classification[0]})
                 self.db.child("tickets").child(id2).update({'confidence':float(classification[1])})
                 print('im updating to the id', id2)
-                self.incr_aggr(classification[0])
+                # self.incr_aggr(classification[0])
                 return
         except AttributeError as e:
             print(e)
@@ -85,23 +85,38 @@ class Mettle:
             print(e)
             pass
 
+
+    def process_message(self, message):
+        regex = re.compile('[%s]' % re.escape(string.punctuation))
+        # replace newlines
+        message = regex.sub('', message)
+        # remove punctuation
+        message = message.replace('/n', ' ')
+        # replace strings of numbers with generic NUM
+        message = re.sub(r'[0-9]{3}\w+', ' NUM', message)
+        # cull unnecessary whitespaces
+        message = re.sub(r' +', ' ', message)
+        return message
+
+
+
     def incr_aggr(self, category):
-        na = self.db.child("analytics").child("aggregate_all").get()
+        na = self.db.child("analytics").child("aggregate_all").get().val()
+        print(na)
         na += 1
         self.db.child("analytics").child("aggregate_all").update(na)
 
-        na_category = self.db.child("analytics").child("category_all").child(category).get()
+        na_category = self.db.child("analytics").child("category_all").child(category).get().val()
         na_category += 1
         self.db.child("analytics").child("category_all").child(category).update(na_category)
-
         return
 
     def incr_corrected(self, category):
-        nc = self.db.child("analytics").child("aggregate_corrected").get()
+        nc = self.db.child("analytics").child("aggregate_corrected").get().val()
         nc += 1
         self.db.child("analytics").child("aggregate_corrected").update(nc)
 
-        nc_category = self.db.child("analytics").child("category_corrected").child(category).get()
+        nc_category = self.db.child("analytics").child("category_corrected").child(category).get().val
         nc_category += 1
         self.db.child("analytics").child("category_corrected").child(category).update(nc_category)
         return
