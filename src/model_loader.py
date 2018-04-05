@@ -23,12 +23,12 @@ class ModelMethods:
     @staticmethod
     def lookup_table(argument):
         d = {
-            0: 'Access Issues / Security Enablement',
-            1: 'Application',
-            2: 'H/W',
-            3: 'Job Failures',
-            4: 'N/W',
-            5: 'S/W',
+            1: 'Access Issues / Security Enablement',
+            2: 'Application',
+            3: 'H/W',
+            4: 'Job Failures',
+            5: 'N/W',
+            6: 'S/W',
         }
         return d[argument]
 
@@ -45,7 +45,7 @@ class ModelMethods:
             output = self.deepdive_model.predict(final_data)[0]
         print(output)
         output_max = np.argmax(output)
-        confidence = output[output_max + 1]
+        confidence = output[output_max]
 
         # We are returning (string, confidence)
         return self.lookup_table(output_max), confidence
