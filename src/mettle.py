@@ -4,6 +4,8 @@ import time
 import imaplib
 import email
 from mettle_config import MettleConfig
+
+
 # from model_loader import ModelMethods()
 
 
@@ -61,7 +63,7 @@ class Mettle:
             self.db.child("tickets").remove(id)
         else:
             classification = self.classify(message)
-            self.update("tickets", {id + "/prediction" : classification})
+            self.update("tickets", {id + "/prediction": classification})
             return
 
     def process_message(self, ticket):
@@ -70,5 +72,3 @@ class Mettle:
 
 if __name__ == "__main__":
     mettle = Mettle()
-
-

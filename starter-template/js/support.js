@@ -216,13 +216,14 @@ function grabFirebaseData() {
             output += "<tr><td>" + value.name + "</td>";
             output += "<td>" + value.email + "</td>"
             output += "<td>" + value.desc + "</td>"
-            output += "<td>" + value.prediction + "</td></tr>"
+            output += "<td>" + value.prediction + "</td>"
+            output += "<td><div class=\"switch\"><label>No<input type=\"checkbox\" checked><span class=\"lever\"></span>Yes</label></div></td></tr>"
         })
         document.getElementById("ticket_table").innerHTML = output;
         //dataTable
         $('#table_wrapper').DataTable();
 
-        tickets_ref.on("child_added", function(snapshot){
+        tickets_ref.on("child_added", function (snapshot) {
             console.log(snapshot.val())
         })
     })
