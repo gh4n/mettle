@@ -3,6 +3,7 @@ from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 import pickle
 import numpy as np
+from tensorflow import get_default_graph
 
 
 class ModelMethods:
@@ -14,7 +15,7 @@ class ModelMethods:
 
         # Load the deepdive cnn model
         self.deepdive_model = keras.models.load_model('../models/deepdive-cnn.h5')
-
+        self.graph = get_default_graph()
         # Unpickle our tokenizer
         with open('../models/tokenizer.pkl', 'rb') as f:
             self.tokenizer = pickle.load(f)
@@ -39,11 +40,10 @@ class ModelMethods:
 
     def classify(self, data):
         final_data = self.condition_data(data)
-        print(final_data)
-        # This method takes in an input of an array of strings and outputs a prediction
-        output = self.deepdive_model.predict(final_data)[0]
+        with self.graph.as_default():
+            # This method takes in an input of an array of strings and outputs a prediction
+            output = self.deepdive_model.predict(final_data)[0]
         output_max = np.argmax(output)
-        print(output_max)
         confidence = output[output_max]
 
         # We are returning (string, confidence)
