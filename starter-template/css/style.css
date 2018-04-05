@@ -12,3 +12,23 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+/*
+* Sticky footer
+*/
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.material-icons {
+  color: #e0e0e0 ;
+}
+
+.btn:hover, .btn-small:hover {
+  background-color: #42a5f5;
+}

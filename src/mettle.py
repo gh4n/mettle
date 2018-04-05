@@ -10,13 +10,12 @@ from mettle_config import MettleConfig
 class Mettle:
 
     def __init__(self):
-        # will the db be remade everytime this is run?
         self.config = MettleConfig()
         self.db = self.autheticate()
         self.firebase = None
         self.auth = None
         self.listener = None
-        self.email = self.config_email()
+        # self.email = self.config_email()
         # self.model_loader = ModelMethods()
 
     def config_db(self):
@@ -26,31 +25,6 @@ class Mettle:
             "databaseURL": "https://mlticket-6a2a8.firebaseio.com",
             "storageBucket": "",
         }
-
-    def config_email(self):
-        """
-        configures email IMAP authentication
-        """
-        mail = imaplib.IMAP4_SSL(self.config.STMP_SERVER)
-        mail.login(self.config.FROM_EMAIL, self.config.FROM_PWD)
-        mail.select('inbox')
-        type, data = mail.search(None, 'ALL')
-        mail_ids = data[0]
-        id_list = mail_ids.split()
-        latest_email_id = int(id_list[-1])
-        type, data = mail.fetch(str.encode(str(latest_email_id)), '(RFC822)')
-
-        for response in data:
-            if isinstance(response, tuple):
-                msg = email.message_from_string(response[1].decode())
-                email_subject = msg['subject']
-                email_from = msg['from']
-                for message_data in msg.get_payload():
-                    print(message_data)
-        return
-
-    def read_emails(self):
-        return
 
     def autheticate(self):
         """
@@ -62,12 +36,12 @@ class Mettle:
         self.db = self.firebase.database()
         return self.db
 
-    def add(self, data):
-        key = self.db.child("tickets").push(data)
+    def add(self, folder, data):
+        key = self.db.child(folder).push(data)
         return key
 
-    def update(self, data):
-        self.db.child("tickets").update(data)
+    def update(self, folder, data):
+        self.db.child(folder).update(data)
 
     def listen(self):
         self.listener = self.db.child("tickets").stream(
@@ -78,11 +52,17 @@ class Mettle:
         info = list(message['data'].keys())[0].split('/')
         type = info[-1]
         id = info[0]
-        if type == "actual" or type == "category":
-            pass
+        # if type == "actual" or type == "category":
+        #     pass
+        if type == "resolved":
+            data = id.val()
+            print(data)
+            self.add("archive", id + "/")
+            self.db.child("tickets").remove(id)
         else:
             classification = self.classify(message)
-            self.update({id + "/prediction" : classification})
+            self.update("tickets", {id + "/prediction" : classification})
+            return
 
     def process_message(self, ticket):
         pass
