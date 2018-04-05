@@ -39,14 +39,17 @@ class ModelMethods:
 
     def classify(self, data):
         final_data = self.condition_data(data)
-        print(final_data)
 
         # This method takes in an input of an array of strings and outputs a prediction
-        output = self.deepdive_model.predict(final_data)
-        output = np.argmax(output[0])
-        return self.lookup_table(output)
+        output = self.deepdive_model.predict(final_data)[0]
+        output_max = np.argmax(output)
+        confidence = output[output_max]
+
+        # We are returning (string, confidence)
+        return self.lookup_table(output_max), confidence
 
 
-test = ModelMethods()
-hello = test.classify('my access account inquiry')
-print(hello)
+if __name__ == '__main__':
+    test = ModelMethods()
+    hello = test.classify('my access account inquiry')
+    print(hello)
