@@ -52,9 +52,9 @@
 
         // bar chart
         var ctx = document.getElementById("myBarChart");
-        var dataPack1 = [89, 90, 82, 84];
-        var dataPack2 = [11, 10, 18, 16];
-        var labels = ["Category 1", "Category 2", "Category 3", "Category 4"];
+        var dataPack1 = [89, 90, 82, 84, 88, 81];
+        var dataPack2 = [11, 10, 18, 16, 12, 19];
+        var labels = ["A/S", "Application", "H/W", "Job Failures", "N/W", "S/W"];
         var barChartData = [
             {
                 label: 'Accurate',
@@ -120,23 +120,33 @@
             labels: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000],
             datasets: [{
                 data: [77, 78, 78, 79, 81, 82, 82, 84, 86, 89],
-                label: 'Category 1',
+                label: 'Access Issues / Security Enablement',
                 borderColor: 'rgba(255, 159, 64, 0.7)',
                 fill: false
             }, {
                 data: [74, 74, 75, 79, 81, 82, 82, 84, 86, 90],
-                label: 'Category 2',
+                label: 'Application',
                 borderColor: 'rgba(153, 102, 255, 0.7)',
                 fill: false
             }, {
                 data: [63, 65, 66, 66, 67, 72, 73, 76, 80, 82],
-                label: 'Category 3',
+                label: 'H/W',
                 borderColor: 'rgba(75, 192, 192, 0.7)',
                 fill: false
             }, {
                 data: [67, 68, 69, 69, 72, 72, 73, 76, 80, 84],
-                label: 'Category 4',
-                borderColor: 'rgba(255, 206, 86, 0.7)',
+                label: 'Job Failures',
+                borderColor: 'rgba(62, 39, 35, 0.7)',
+                fill: false
+            },  {
+                data: [68, 69, 69, 70, 71, 72, 77, 78, 86, 87],
+                label: 'N/W',
+                borderColor: 'rgba(255, 109, 0, 0.7)',
+                fill: false
+            }, {
+                data: [56, 58, 59, 60, 61, 61, 75, 77, 77, 78],
+                label: 'S/W',
+                borderColor: 'rgba(255, 23, 68, 0.7)',
                 fill: false
             }, {
                 data: [71, 72, 72, 76, 79, 81, 82, 84, 85, 86],
@@ -193,20 +203,17 @@ function grabFirebaseData() {
     var db = firebase.database()
     var tickets_ref = db.ref('tickets/');
 
-    tickets_ref.orderByKey().once("value", function (snapshot) {
+    tickets_ref.on("value", function (snapshot) {
         var data = snapshot.val();
-        console.log(data);
-
-        var output = ""
+        var output = "";
         $.each(data, function (index, value) {
-            console.log(value);
             output += "<tr><td>" + value.name + "</td>";
             output += "<td>" + value.email + "</td>"
             output += "<td>" + value.desc + "</td>"
             output += "<td>" + value.prediction + "</td>"
             output += "<td><div class=\"switch\"><label>No<input type=\"checkbox\" checked><span class=\"lever\"></span>Yes</label></div></td></tr>"
-        })
-        document.getElementById("ticket_table").innerHTML = output;
+        });
+        document.getElementById("ticket_table").innerHTML += output;
         //dataTable
         $('#table_wrapper').DataTable();
 
@@ -220,6 +227,9 @@ function grabFirebaseData() {
                         $('#modal').modal('open');
 
                         var confirmBtn = $('#modal').find('#confirm_btn');
+                        confirmBtn.on('click', function(){
+                          var actualCategory = $('#actualCategory_select').find('select').val();
+                        });
                     }
                 });
         });
