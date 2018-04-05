@@ -4,9 +4,7 @@ import time
 import imaplib
 import email
 from mettle_config import MettleConfig
-from queue import Queue
-
-# from model_loader import ModelMethods()
+from model_loader import ModelMethods
 
 
 class Mettle:
@@ -16,10 +14,8 @@ class Mettle:
         self.db = self.autheticate()
         self.firebase = None
         self.auth = None
-        self.listener = None
-        # self.email = self.config_email()
-        # self.model_loader = ModelMethods()
-        self.model_queue = Queue()
+        self.listener = self.listen()
+        self.model_loader = ModelMethods()
 
     def config_db(self):
         return {
@@ -52,20 +48,64 @@ class Mettle:
         )
 
     def stream_handler(self, message):
-        info = list(message['data'].keys())[0].split('/')
-        type = info[-1]
-        id = info[0]
-        # if type == "actual" or type == "category":
-        #     pass
-        if type == "resolved":
-            data = id.val()
-            print(data)
-            self.add("archive", id + "/")
-            self.db.child("tickets").remove(id)
-        else:
-            classification = self.classify(message)
-            self.update("tickets", {id + "/prediction": classification})
-            return
+        print(message)
+        try:
+            info = list(message['data'].keys())[0].split('/')
+            type = info[-1]
+            id = info[0]
+            message_str = message['data']['desc']
+
+            # ticket resolved: archive ticket
+            if type == "resolved":
+                data = self.db.child("tickets").child(id).get()
+                data = data.val()
+                self.add("archive", data)
+                self.db.child("tickets").child(id).remove()
+
+            # classifcation was manually updated, increment
+            if type == "actual":
+                data = self.db.child("tickets").child(id).get()
+                new_category = data["actual"]
+                self.analytics.incr(new_category)
+
+            # ticket sent to NN to be classified
+            else:
+                print("hello")
+                classification = self.model_loader.classify(message_str)
+                print(classification)
+                self.update("tickets", {id + "/prediction" : classification[0]})
+                self.update("tickets", {id + "/confidence": classification[1]})
+                return
+        except AttributeError as e:
+            print(e)
+            pass
+        except KeyError as e:
+            print(e)
+            pass
+
+    def incr_aggr(self, category):
+        na = self.db.child("analytics").child("aggregate_all").get()
+        na += 1
+        self.db.child("analytics").child("aggregate_all").update(na)
+
+        na_category = self.db.child("analytics").child("category_all").child(category).get()
+        na_category += 1
+        self.db.child("analytics").child("category_all").child(category).update(na_category)
+
+        return
+
+    def incr_corrected(self, category):
+        nc = self.db.child("analytics").child("aggregate_corrected").get()
+        nc += 1
+        self.db.child("analytics").child("aggregate_corrected").update(nc)
+
+        nc_category = self.db.child("analytics").child("category_corrected").child(category).get()
+        nc_category += 1
+        self.db.child("analytics").child("category_corrected").child(category).update(nc_category)
+        return
+
+
+
 
     def process_message(self, ticket):
         pass
@@ -73,3 +113,5 @@ class Mettle:
 
 if __name__ == "__main__":
     mettle = Mettle()
+
+
