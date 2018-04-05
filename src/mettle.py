@@ -3,6 +3,13 @@ import string
 import re
 from mettle_config import MettleConfig
 from model_loader import ModelMethods
+import sys
+
+from colorama import init
+
+init(strip=not sys.stdout.isatty())  # strip colors if stdout is redirected
+from termcolor import cprint
+from pyfiglet import figlet_format
 
 
 class Mettle:
@@ -14,6 +21,12 @@ class Mettle:
         self.listener = self.listen()
         self.model_loader = ModelMethods()
 
+
+    def welcome(self):
+        cprint(figlet_format('mettle!', font='starwars'),
+               'yellow', 'on_red', attrs=['bold'])
+
+
     def autheticate(self):
         """
         Handles authentication and connection to firebaseDB
@@ -22,7 +35,7 @@ class Mettle:
         self.auth = self.firebase.auth()
         user = self.auth.sign_in_with_email_and_password(self.config.db_email, self.config.db_pwd)
         self.db = self.firebase.database()
-        print("WELCOME")
+        self.welcome()
         return self.db
 
     def add(self, folder, data):
