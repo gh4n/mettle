@@ -138,7 +138,7 @@
                 label: 'Job Failures',
                 borderColor: 'rgba(62, 39, 35, 0.7)',
                 fill: false
-            },  {
+            }, {
                 data: [68, 69, 69, 70, 71, 72, 77, 78, 86, 87],
                 label: 'N/W',
                 borderColor: 'rgba(255, 109, 0, 0.7)',
@@ -203,58 +203,80 @@ function grabFirebaseData() {
     var db = firebase.database()
     var tickets_ref = db.ref('tickets/');
 
-     //dataTable
-     var dataTable = $('#table_wrapper').DataTable(
+    //dataTable
+    $('#table_wrapper').DataTable(
         {
-         "columns": [
-           null,
-           null,
-           null,
-           { "width": "20%" },
-           { "width": "20%" },
-         ]
-       }
-     );
+            "columns": [
+                null,
+                null,
+                null,
+                {"width": "20%"},
+                {"width": "20%"},
+            ],
+            // "bDestroy": true,
+            // "bServerSide": true,
+        }
+    );
 
+    $('input:checkbox').each(function () {
+        $(this).change(
+            function () {
+                if (!$(this).is(':checked')) {
+                    $('select').formSelect();
+                    $('#modal').modal();
+                    $('#modal').modal('open');
+
+                    var confirmBtn = $('#modal').find('#confirm_btn');
+                    confirmBtn.on('click', function () {
+                        var actualCategory = $('#actualCategory_select').find('select').val();
+                    });
+                }
+            });
+    });
     tickets_ref.on("value", function (snapshot) {
         var data = snapshot.val();
         var output = "";
-        console.log(data)
-        // $.each(data, function (index, value) {
-        //     output += "<tr><td>" + value.name + "</td>";
-        //     output += "<td>" + value.email + "</td>"
-        //     output += "<td>" + value.desc + "</td>"
-        //     output += "<td>" + value.prediction + "</td>"
-        //     output += "<td><div class=\"switch\"><label>No<input type=\"checkbox\" checked><span class=\"lever\"></span>Yes</label></div></td></tr>"
-        // });
-        // document.getElementById("ticket_table").innerHTML += output;
-        dataTable.row.add([
-            data.name,
-            data.email,
-            data.desc,
-            data.prediction
-            
-        ]).draw(false);
-        //uncheck incorrect items
-        $('input:checkbox').each(function () {
-            $(this).change(
-                function () {
-                    if (!$(this).is(':checked')) {
-                        $('select').formSelect();
-                        $('#modal').modal();
-                        $('#modal').modal('open');
 
-                        var confirmBtn = $('#modal').find('#confirm_btn');
-                        confirmBtn.on('click', function(){
-                          var actualCategory = $('#actualCategory_select').find('select').val();
-                        });
-                    }
-                });
+        //
+        $("#table_wrapper").DataTable().clear().destroy();
+
+        document.getElementById("ticket_table").innerHTML = output;
+        console.log(data);
+        $.each(data, function (index, value) {
+            output += "<tr><td>" + value.name + "</td>";
+            output += "<td>" + value.email + "</td>";
+            output += "<td>" + value.desc + "</td>";
+            output += "<td>" + value.prediction + "</td>";
+            output += "<td><div class=\"switch\"><label>No<input type=\"checkbox\" checked><span class=\"lever\"></span>Yes</label></div></td></tr>"
         });
+        document.getElementById("ticket_table").innerHTML += output;
 
-        tickets_ref.on("child_added", function (snapshot) {
-            console.log(snapshot.val())
-        })
+        $('#table_wrapper').DataTable(
+            {
+                "columns": [
+                    null,
+                    null,
+                    null,
+                    {"width": "20%"},
+                    {"width": "20%"},
+                ],
+                // "bDestroy": true,
+                // "bServerSide": true,
+            }
+        );
+
+        // dataTable.row.add([
+        //     data.name,
+        //     data.email,
+        //     data.desc,
+        //     data.prediction
+        //
+        // ]).draw(false);
+
+
+        // tickets_ref.on("child_added", function (snapshot) {
+        //     console.log(snapshot.val())
+        // })
     })
 
 }
