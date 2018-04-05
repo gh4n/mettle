@@ -9,10 +9,25 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCsWK-fZ8sQIg3ReJjderS58_b_hZSNjmg",
+            authDomain: "mlticket-6a2a8.firebaseapp.com",
+            databaseURL: "https://mlticket-6a2a8.firebaseio.com",
+            projectId: "mlticket-6a2a8",
+            storageBucket: "mlticket-6a2a8.appspot.com",
+            messagingSenderId: "133237699283"
+        };
+        firebase.initializeApp(config);
+    </script>
 </head>
 <body>
 <nav>
     <div class="nav-wrapper #b39ddb deep-purple lighten-2">
+        <script type="application/javascript" src="js/client.js"></script>
+
         <div class="container">
             <a href="#" class="brand-logo">Logo</a>
         </div>
@@ -42,10 +57,12 @@
                 </div>
                 <div class="row">
                     <div class="col s2 offset-s10">
-                        <button class="btn waves-effect waves-light #b39ddb deep-purple lighten-2" type="submit"
-                                name="action">Submit
+                        <button class="btn waves-effect waves-light #b39ddb deep-purple lighten-2" id="submit_button"
+                                onclick="test()">
+                            Submit
                             <i class="material-icons right">send</i>
                         </button>
+                        <!--<button onclick="test()">Hello!!</button>-->
                     </div>
                 </div>
         </div>
