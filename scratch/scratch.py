@@ -18,3 +18,25 @@
 #             for message_data in msg.get_payload():
 #                 print(message_data)
 #     return
+
+def incr_aggr(self, category):
+    na = self.db.child("analytics").child("aggregate_all").get().val()
+    print(na)
+    na += 1
+    self.db.child("analytics").update({"aggregate_all": na})
+
+    na_category = self.db.child("analytics").child("category_all").child(category).get().val()
+    na_category += 1
+    self.db.child("analytics").child("category_all").update({category: na_category})
+    return
+
+
+def incr_corrected(self, category):
+    nc = self.db.child("analytics").child("aggregate_corrected").get().val()
+    nc += 1
+    self.db.child("analytics").child("aggregate_corrected").update(nc)
+
+    nc_category = self.db.child("analytics").child("category_corrected").child(category).get().val
+    nc_category += 1
+    self.db.child("analytics").child("category_corrected").child(category).update(nc_category)
+    return

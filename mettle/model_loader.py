@@ -34,7 +34,7 @@ class ModelMethods:
 
     def condition_data(self, data):
         # tokenizer.texts_to_sequences(data)
-        print(data)
+        # print(data)
         x = pad_sequences(self.tokenizer.texts_to_sequences([data]), maxlen=self.seq_len)
         return x
 

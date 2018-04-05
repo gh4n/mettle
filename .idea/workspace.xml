@@ -2,8 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5e8ea93-e809-4533-96fd-441f48ef7b2d" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/requirements.txt" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/mettle.py" afterPath="$PROJECT_DIR$/src/mettle.py" />
+      <change beforePath="$PROJECT_DIR$/scratch/scratch.py" afterPath="$PROJECT_DIR$/scratch/scratch.py" />
+      <change beforePath="$PROJECT_DIR$/src/count.txt" afterPath="$PROJECT_DIR$/docs/readme.md" />
+      <change beforePath="$PROJECT_DIR$/src/deepdive_test.csv" afterPath="$PROJECT_DIR$/data/deepdive_test.csv" />
+      <change beforePath="$PROJECT_DIR$/src/email_reader.py" afterPath="$PROJECT_DIR$/scratch/email_reader.py" />
+      <change beforePath="$PROJECT_DIR$/src/mettle.py" afterPath="$PROJECT_DIR$/mettle/mettle.py" />
+      <change beforePath="$PROJECT_DIR$/src/mettle_config.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/model_loader.py" afterPath="$PROJECT_DIR$/mettle/model_loader.py" />
+      <change beforePath="$PROJECT_DIR$/src/test.csv" afterPath="$PROJECT_DIR$/tests/test.csv" />
+      <change beforePath="$PROJECT_DIR$/src/test.py" afterPath="$PROJECT_DIR$/tests/test.py" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.bootstrap.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.bootstrap.css" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.bootstrap.min.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.bootstrap.min.css" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.bootstrap4.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.bootstrap4.css" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.foundation.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.foundation.css" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.foundation.min.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.foundation.min.css" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.jqueryui.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.jqueryui.css" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.jqueryui.min.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.jqueryui.min.css" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.semanticui.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.semanticui.css" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.semanticui.min.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.semanticui.min.css" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/jquery.dataTables.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/jquery.dataTables.css" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/jquery.dataTables.min.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/jquery.dataTables.min.css" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/images/sort_asc.png" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/images/sort_asc.png" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/images/sort_asc_disabled.png" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/images/sort_asc_disabled.png" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/images/sort_both.png" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/images/sort_both.png" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/images/sort_desc.png" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/images/sort_desc.png" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/images/sort_desc_disabled.png" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/images/sort_desc_disabled.png" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.bootstrap.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.bootstrap.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.bootstrap.min.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.bootstrap.min.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.bootstrap4.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.bootstrap4.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.foundation.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.foundation.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.foundation.min.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.foundation.min.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.jqueryui.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.jqueryui.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.jqueryui.min.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.jqueryui.min.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.semanticui.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.semanticui.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.semanticui.min.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.semanticui.min.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/jquery.dataTables.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/jquery.dataTables.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/jquery.dataTables.min.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/jquery.dataTables.min.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/datatables.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/datatables.css" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/datatables.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/datatables.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/datatables.min.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/datatables.min.css" />
+      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/datatables.min.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/datatables.min.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/client.html" afterPath="$PROJECT_DIR$/mettle/UI/client.html" />
+      <change beforePath="$PROJECT_DIR$/starter-template/css/materialize.css" afterPath="$PROJECT_DIR$/mettle/UI/css/materialize.css" />
+      <change beforePath="$PROJECT_DIR$/starter-template/css/materialize.min.css" afterPath="$PROJECT_DIR$/mettle/UI/css/materialize.min.css" />
+      <change beforePath="$PROJECT_DIR$/starter-template/css/style.css" afterPath="$PROJECT_DIR$/mettle/UI/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/starter-template/imge/Logo.png" afterPath="$PROJECT_DIR$/mettle/UI/imge/Logo.png" />
+      <change beforePath="$PROJECT_DIR$/starter-template/js/Chart.min.js" afterPath="$PROJECT_DIR$/mettle/UI/js/Chart.min.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/js/client.js" afterPath="$PROJECT_DIR$/mettle/UI/js/client.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/js/materialize.js" afterPath="$PROJECT_DIR$/mettle/UI/js/materialize.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/js/materialize.min.js" afterPath="$PROJECT_DIR$/mettle/UI/js/materialize.min.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/js/support.js" afterPath="$PROJECT_DIR$/mettle/UI/js/support.js" />
+      <change beforePath="$PROJECT_DIR$/starter-template/support.html" afterPath="$PROJECT_DIR$/mettle/UI/support.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,9 +68,9 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ml_ticket$quick_start.coverage" NAME="quick_start Coverage Results" MODIFIED="1522860061636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/ml_ticket$test.coverage" NAME="test Coverage Results" MODIFIED="1522906159303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/ml_ticket$database.coverage" NAME="database Coverage Results" MODIFIED="1522928958590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/ml_ticket$database.coverage" NAME="database Coverage Results" MODIFIED="1522935465987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/ml_ticket$mettle_config.coverage" NAME="mettle_config Coverage Results" MODIFIED="1522861016353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/ml_ticket$mettle.coverage" NAME="mettle Coverage Results" MODIFIED="1522822412224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/ml_ticket$mettle.coverage" NAME="mettle Coverage Results" MODIFIED="1522939528810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mettle" />
     <SUITE FILE_PATH="coverage/ml_ticket$email_reader.coverage" NAME="email_reader Coverage Results" MODIFIED="1522861830009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="DatabaseView">
@@ -34,46 +87,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="675">
-      <file leaf-file-name="mettle.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/mettle.py">
+      <file leaf-file-name="mettle.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mettle/mettle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3038">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="-1616">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#94#109#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mettle_config.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mettle_config.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="model_loader.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model_loader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -89,11 +123,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>stream_</find>
-      <find>stream_han</find>
-      <find>print</find>
-      <find>database</find>
-      <find>andy from google</find>
       <find>test</find>
       <find>ghan</find>
       <find>grace</find>
@@ -103,7 +132,6 @@
       <find>error</find>
       <find>update</find>
       <find>key</find>
-      <find>add</find>
       <find>tv</find>
       <find>mirror</find>
       <find>unable</find>
@@ -119,6 +147,12 @@
       <find>email</find>
       <find>pass</find>
       <find>p</find>
+      <find>cprin</find>
+      <find>add</find>
+      <find>authe</find>
+      <find>scheme</find>
+      <find>schem</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -143,12 +177,13 @@
         <option value="$PROJECT_DIR$/src/subscriber.py" />
         <option value="$PROJECT_DIR$/src/count.txt" />
         <option value="$PROJECT_DIR$/src/email_reader.py" />
-        <option value="$PROJECT_DIR$/scratch/scratch.py" />
         <option value="$PROJECT_DIR$/src/test.py" />
         <option value="$PROJECT_DIR$/starter-template/js/support.js" />
         <option value="$PROJECT_DIR$/src/model_loader.py" />
         <option value="$PROJECT_DIR$/src/mettle_config.py" />
+        <option value="$PROJECT_DIR$/scratch/scratch.py" />
         <option value="$PROJECT_DIR$/src/mettle.py" />
+        <option value="$PROJECT_DIR$/starter-template/js/materialize.min.js" />
       </list>
     </option>
   </component>
@@ -159,10 +194,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="59" />
-    <option name="y" value="70" />
-    <option name="width" value="1845" />
-    <option name="height" value="2031" />
+    <option name="x" value="53" />
+    <option name="y" value="64" />
+    <option name="width" value="3734" />
+    <option name="height" value="2043" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -180,6 +215,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,17 +223,11 @@
               <item name="ml_ticket" type="b2602c69:ProjectViewProjectNode" />
               <item name="ml_ticket" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ml_ticket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml_ticket" type="462c0819:PsiDirectoryNode" />
-              <item name="starter-template" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -207,126 +237,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/scratch" />
-      <recent name="$PROJECT_DIR$/models" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/starter-template/js/client.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/starter-template/js/support.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/starter-template/support.html</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/mettle" />
+      <recent name="$PROJECT_DIR$/scratch" />
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/tests" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -340,7 +260,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.database">
+  <component name="RunManager" selected="Python.mettle">
     <configuration name="database" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -373,7 +293,26 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ml_ticket" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/email_reader.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch/email_reader.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="mettle" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mettle" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ml_ticket" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mettle/mettle.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -398,25 +337,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="quick_start" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ml_ticket" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch/quick_start.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -430,7 +350,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ml_ticket" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -439,17 +359,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.database" />
       <item index="1" class="java.lang.String" itemvalue="Python.test" />
-      <item index="2" class="java.lang.String" itemvalue="Python.quick_start" />
-      <item index="3" class="java.lang.String" itemvalue="Python.mettle_config" />
-      <item index="4" class="java.lang.String" itemvalue="Python.email_reader" />
+      <item index="2" class="java.lang.String" itemvalue="Python.mettle_config" />
+      <item index="3" class="java.lang.String" itemvalue="Python.email_reader" />
+      <item index="4" class="java.lang.String" itemvalue="Python.mettle" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.database" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.email_reader" />
-        <item index="3" class="java.lang.String" itemvalue="Python.mettle_config" />
-        <item index="4" class="java.lang.String" itemvalue="Python.quick_start" />
+        <item index="0" class="java.lang.String" itemvalue="Python.mettle" />
+        <item index="1" class="java.lang.String" itemvalue="Python.database" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.email_reader" />
+        <item index="4" class="java.lang.String" itemvalue="Python.mettle_config" />
       </list>
     </recent_temporary>
   </component>
@@ -572,33 +492,40 @@
       <option name="project" value="LOCAL" />
       <updated>1522928033027</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fun ascii art lmao">
+      <created>1522929030403</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1522929030403</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="59" y="70" width="1845" height="2031" extended-state="0" />
+    <frame x="53" y="64" width="3734" height="2043" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5755194" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961518" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24707195" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.56626505" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19493392" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329891" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961518" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995194" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39933074" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39933074" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -639,7 +566,8 @@
     <MESSAGE value="updated gitignore, google api setup is annoying :(" />
     <MESSAGE value="updated backend" />
     <MESSAGE value="added message  parsing" />
-    <option name="LAST_COMMIT_MESSAGE" value="added message  parsing" />
+    <MESSAGE value="fun ascii art lmao" />
+    <option name="LAST_COMMIT_MESSAGE" value="fun ascii art lmao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -660,32 +588,11 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/lib64/python3.6/email/parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2112">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib64/python3.6/email/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1221">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/ml_ticket/lib/python3.6/site-packages/pyttsx/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/-1595905224/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4356">
@@ -693,7 +600,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mettle_config.py">
+    <entry file="file://$PROJECT_DIR$/mettle/mettle_config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
           <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
@@ -708,7 +615,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
+    <entry file="file://$PROJECT_DIR$/tests/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
@@ -718,22 +625,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_loader.py">
+    <entry file="file://$PROJECT_DIR$/mettle/model_loader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mettle.py">
+    <entry file="file://$PROJECT_DIR$/mettle/mettle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1155">
           <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#94#109#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -766,7 +671,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mettle_config.py">
+    <entry file="file://$PROJECT_DIR$/mettle/mettle_config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
           <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
@@ -781,7 +686,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
+    <entry file="file://$PROJECT_DIR$/tests/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
@@ -791,34 +696,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_loader.py">
+    <entry file="file://$PROJECT_DIR$/mettle/model_loader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/email_reader.py">
+    <entry file="file://$PROJECT_DIR$/scratch/email_reader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2211">
           <caret line="73" column="28" lean-forward="true" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mettle.py">
+    <entry file="file://$PROJECT_DIR$/mettle/mettle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#94#109#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/deepdive_test.csv">
+    <entry file="file://$PROJECT_DIR$/data/deepdive_test.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -833,7 +736,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
+    <entry file="file://$PROJECT_DIR$/tests/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33">
           <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="13" />
@@ -843,19 +746,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/deepdive_test.csv">
+    <entry file="file://$PROJECT_DIR$/data/deepdive_test.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mettle.py">
+    <entry file="file://$PROJECT_DIR$/mettle/mettle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#94#109#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -924,20 +827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/email_reader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="50" column="30" lean-forward="true" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scratch/scratch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scratch/quick_start.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="759">
@@ -952,7 +841,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/starter-template/js/materialize.js">
+    <entry file="file://$PROJECT_DIR$/mettle/UI/js/materialize.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -962,7 +851,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/starter-template/support.html">
+    <entry file="file://$PROJECT_DIR$/mettle/UI/support.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33">
           <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
@@ -970,7 +859,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/starter-template/js/support.js">
+    <entry file="file://$PROJECT_DIR$/mettle/UI/js/support.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8415">
           <caret line="255" column="0" lean-forward="false" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
@@ -980,28 +869,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/starter-template/js/client.js">
+    <entry file="file://$PROJECT_DIR$/mettle/UI/js/client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -1018,11 +889,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18336">
           <caret line="1831" column="0" lean-forward="false" selection-start-line="1831" selection-start-column="0" selection-end-line="1831" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/starter-template/client.html">
+    <entry file="file://$PROJECT_DIR$/mettle/UI/client.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1089">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1030,20 +900,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_loader.py">
+    <entry file="file://$PROJECT_DIR$/mettle/model_loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="81">
+          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mettle_config.py">
+    <entry file="file://$PROJECT_DIR$/scratch/scratch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        <state relative-caret-position="1189">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scratch/email_reader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1452">
+          <caret line="50" column="30" lean-forward="true" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mettle/UI/js/materialize.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="5" column="95523" lean-forward="false" selection-start-line="5" selection-start-column="95523" selection-end-line="5" selection-end-column="95523" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mettle/mettle_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="28" column="23" lean-forward="false" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1056,13 +964,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mettle.py">
+    <entry file="file://$PROJECT_DIR$/mettle/mettle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3038">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="-1616">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#94#109#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
