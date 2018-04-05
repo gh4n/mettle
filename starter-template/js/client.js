@@ -24,7 +24,6 @@ function test() {
         document.getElementById('shortDescription').value = ""
     });
 
-
     event.preventDefault();
     return false
 }
