@@ -2,61 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5e8ea93-e809-4533-96fd-441f48ef7b2d" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/scratch/scratch.py" afterPath="$PROJECT_DIR$/scratch/scratch.py" />
-      <change beforePath="$PROJECT_DIR$/src/count.txt" afterPath="$PROJECT_DIR$/docs/readme.md" />
-      <change beforePath="$PROJECT_DIR$/src/deepdive_test.csv" afterPath="$PROJECT_DIR$/data/deepdive_test.csv" />
-      <change beforePath="$PROJECT_DIR$/src/email_reader.py" afterPath="$PROJECT_DIR$/scratch/email_reader.py" />
-      <change beforePath="$PROJECT_DIR$/src/mettle.py" afterPath="$PROJECT_DIR$/mettle/mettle.py" />
-      <change beforePath="$PROJECT_DIR$/src/mettle_config.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/model_loader.py" afterPath="$PROJECT_DIR$/mettle/model_loader.py" />
-      <change beforePath="$PROJECT_DIR$/src/test.csv" afterPath="$PROJECT_DIR$/tests/test.csv" />
-      <change beforePath="$PROJECT_DIR$/src/test.py" afterPath="$PROJECT_DIR$/tests/test.py" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.bootstrap.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.bootstrap.css" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.bootstrap.min.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.bootstrap4.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.bootstrap4.css" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.foundation.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.foundation.css" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.foundation.min.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.foundation.min.css" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.jqueryui.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.jqueryui.css" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.jqueryui.min.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.jqueryui.min.css" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.semanticui.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.semanticui.css" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/dataTables.semanticui.min.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/dataTables.semanticui.min.css" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/jquery.dataTables.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/jquery.dataTables.css" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/css/jquery.dataTables.min.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/css/jquery.dataTables.min.css" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/images/sort_asc.png" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/images/sort_asc.png" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/images/sort_asc_disabled.png" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/images/sort_asc_disabled.png" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/images/sort_both.png" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/images/sort_both.png" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/images/sort_desc.png" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/images/sort_desc.png" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/images/sort_desc_disabled.png" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/images/sort_desc_disabled.png" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.bootstrap.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.bootstrap.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.bootstrap.min.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.bootstrap4.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.bootstrap4.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.foundation.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.foundation.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.foundation.min.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.foundation.min.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.jqueryui.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.jqueryui.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.jqueryui.min.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.jqueryui.min.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.semanticui.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.semanticui.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/dataTables.semanticui.min.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/dataTables.semanticui.min.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/jquery.dataTables.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/jquery.dataTables.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/DataTables-1.10.16/js/jquery.dataTables.min.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/DataTables-1.10.16/js/jquery.dataTables.min.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/datatables.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/datatables.css" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/datatables.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/datatables.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/datatables.min.css" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/datatables.min.css" />
-      <change beforePath="$PROJECT_DIR$/starter-template/DataTables/datatables.min.js" afterPath="$PROJECT_DIR$/mettle/UI/DataTables/datatables.min.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/client.html" afterPath="$PROJECT_DIR$/mettle/UI/client.html" />
-      <change beforePath="$PROJECT_DIR$/starter-template/css/materialize.css" afterPath="$PROJECT_DIR$/mettle/UI/css/materialize.css" />
-      <change beforePath="$PROJECT_DIR$/starter-template/css/materialize.min.css" afterPath="$PROJECT_DIR$/mettle/UI/css/materialize.min.css" />
-      <change beforePath="$PROJECT_DIR$/starter-template/css/style.css" afterPath="$PROJECT_DIR$/mettle/UI/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/starter-template/imge/Logo.png" afterPath="$PROJECT_DIR$/mettle/UI/imge/Logo.png" />
-      <change beforePath="$PROJECT_DIR$/starter-template/js/Chart.min.js" afterPath="$PROJECT_DIR$/mettle/UI/js/Chart.min.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/js/client.js" afterPath="$PROJECT_DIR$/mettle/UI/js/client.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/js/materialize.js" afterPath="$PROJECT_DIR$/mettle/UI/js/materialize.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/js/materialize.min.js" afterPath="$PROJECT_DIR$/mettle/UI/js/materialize.min.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/js/support.js" afterPath="$PROJECT_DIR$/mettle/UI/js/support.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/support.html" afterPath="$PROJECT_DIR$/mettle/UI/support.html" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -99,7 +45,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -108,6 +54,16 @@
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="33">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -171,7 +127,6 @@
         <option value="$PROJECT_DIR$/src/email.py" />
         <option value="$PROJECT_DIR$/src/email_config.py" />
         <option value="$PROJECT_DIR$/src/quick_start.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/mail_listener.py" />
         <option value="$PROJECT_DIR$/src/email_notifications.py" />
         <option value="$PROJECT_DIR$/src/subscriber.py" />
@@ -184,6 +139,7 @@
         <option value="$PROJECT_DIR$/scratch/scratch.py" />
         <option value="$PROJECT_DIR$/src/mettle.py" />
         <option value="$PROJECT_DIR$/starter-template/js/materialize.min.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -499,11 +455,19 @@
       <option name="project" value="LOCAL" />
       <updated>1522929030403</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="cleaned up directory structure, initialised readme, code refactoring">
+      <created>1522940568547</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1522940568547</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="64" width="3734" height="2043" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -511,7 +475,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24707195" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19493392" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19493392" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -567,7 +531,8 @@
     <MESSAGE value="updated backend" />
     <MESSAGE value="added message  parsing" />
     <MESSAGE value="fun ascii art lmao" />
-    <option name="LAST_COMMIT_MESSAGE" value="fun ascii art lmao" />
+    <MESSAGE value="cleaned up directory structure, initialised readme, code refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned up directory structure, initialised readme, code refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -777,13 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/email_notifications.py" />
     <entry file="file://$PROJECT_DIR$/scratch/google_api_key_gmail.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -990,6 +948,14 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

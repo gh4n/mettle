@@ -4,3 +4,5 @@ google-cloud-sdk
 *.json
 *.xml
 .idea
+.DS_Store
+__pycache__
