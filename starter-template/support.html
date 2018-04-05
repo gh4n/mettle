@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="DataTables/datatables.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav>
+      <div class="nav-wrapper #b39ddb deep-purple lighten-2">
+        <div class="container">
+          <a href="#" class="brand-logo">Logo</a>
+          <ul id="nav" class="right">
+            <li class="active"><a href="#ticket-banner">Tickets</a></li>
+            <li><a href="#analytic-banner">Analytics</a></li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+  <div class="section no-pad-bot" id="ticket-banner">
+    <div class="container">
+        <table id="ticketTable" class="striped responsive-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Short Description</th>
+                <th>Category</th>
+                <th>Correctness</th>
+              </tr>
+            </thead>
+            <tbody> 
+              <tr>
+                <td>Dan</td>
+                <td>dan@test.com</td>
+                <td>I'm having problem with my computer</td>
+                <td>IT department</td>
+                <td>
+                  <div class="switch">
+                      <label>
+                        No
+                        <input type="checkbox" checked>
+                        <span class="lever"></span>
+                        Yes
+                      </label>
+                  </div>
+                </td>
+              </tr>  
+            </tbody>
+          </table>
+    </div>
+  </div>
+  <div class="section no-pad-bot hide" id="analytic-banner">
+      <div class="container">
+          <div class="row">
+            <div class="col s6">
+              <div class="card">
+                <div class="card-image">
+                  <div class="container">
+                    <canvas id="myPieChart" width="400" height="400"></canvas>
+                  </div> 
+                </div>
+              </div>
+            </div>
+            <div class="col s6">
+              <div class="card">
+                <div class="card-image">
+                  <div class="container">
+                    <canvas id="myBarChart" width="400" height="400"></canvas>
+                  </div> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+                <div class="card">
+                  <div class="card-image">
+                    <div class="container">
+                      <canvas id="myLineChart" width="400" height="200"></canvas>
+                    </div> 
+                  </div>
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+  <!--  Popups-->
+  <div id="modal" class="modal">
+      <div class="modal-content">
+          <div class="row">  
+              <div class="input-field col s4">
+                  <p>This ticket should goes to</p>
+              </div> 
+              <div class="input-field col s8">
+                <select>
+                    <option value="" disabled selected>Choose a category</option>
+                    <option value="1">Category 1</option>
+                    <option value="2">Category 2</option>
+                    <option value="3">Category 3</option>
+                </select>
+              </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-light btn">Confirm</a>
+      </div>
+  </div>         
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/support.js"></script>
+  <script src="js/Chart.min.js"></script>
+  <script src="DataTables/datatables.min.js"></script>
+  </body>
+</html>
