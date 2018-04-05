@@ -12,6 +12,7 @@ function test() {
         name: input_name,
         email: input_email,
         desc: input_shortDescription,
+        desc_parsed: "NULL",
         prediction: "NULL",
         actual: "NULL",
         resolved: false

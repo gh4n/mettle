@@ -219,6 +219,7 @@ function grabFirebaseData() {
     tickets_ref.on("value", function (snapshot) {
         var data = snapshot.val();
         var output = "";
+        console.log(data)
         // $.each(data, function (index, value) {
         //     output += "<tr><td>" + value.name + "</td>";
         //     output += "<td>" + value.email + "</td>"
@@ -227,13 +228,13 @@ function grabFirebaseData() {
         //     output += "<td><div class=\"switch\"><label>No<input type=\"checkbox\" checked><span class=\"lever\"></span>Yes</label></div></td></tr>"
         // });
         // document.getElementById("ticket_table").innerHTML += output;
-        dataTable.row.add(
-            value.name,
-            value.email,
-            value.desc,
-            value.prediction,
+        dataTable.row.add([
+            data.name,
+            data.email,
+            data.desc,
+            data.prediction
             
-        ).draw(false);
+        ]).draw(false);
         //uncheck incorrect items
         $('input:checkbox').each(function () {
             $(this).change(
