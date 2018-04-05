@@ -55,10 +55,11 @@ class Mettle:
         # if type == "actual" or type == "category":
         #     pass
         if type == "resolved":
-            data = id.val()
+            data = self.db.child("tickets").child(id).get()
+            data = data.val()
             print(data)
-            self.add("archive", id + "/")
-            self.db.child("tickets").remove(id)
+            self.add("archive", data)
+            self.db.child("tickets").child(id).remove()
         else:
             classification = self.classify(message)
             self.update("tickets", {id + "/prediction" : classification})

@@ -9,10 +9,11 @@ storage.listen()
 with open(file) as f:
     data = csv.DictReader(f)
     for row in data:
-        key = storage.add("ticket", {"desc": row['text'], "prediction": "NULL", "actual": "NULL", "resolved": False})
+        key = storage.add("tickets", {"desc": row['text'], "prediction": "NULL", "actual": "NULL", "resolved": False})
 
         # storage.update("ticket", {key['name'] + "/prediction" : "Bad"})
         # storage.update("archive", {key['name'] + "/actual" : "Good"})
-        storage.update("archive", {key['name'] + "/resolved": True})
-        print()
+        storage.update("tickets", {key['name'] + "/resolved": True})
 
+
+        # TICKETS SHOULD BE EMPTY, ARCHIVE SHOULD BE FULL
