@@ -43,7 +43,6 @@ class ModelMethods:
         with self.graph.as_default():
             # This method takes in an input of an array of strings and outputs a prediction
             output = self.deepdive_model.predict(final_data)[0]
-        print(output)
         output_max = np.argmax(output)
         confidence = output[output_max]
 

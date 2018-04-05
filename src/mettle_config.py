@@ -7,22 +7,14 @@ class MettleConfig:
         self.FROM_PWD = "mettle30"
         self.STMP_SERVER = "imap.gmail.com"
         self.STMP_PORT = 993
-        self.count_file = 'count.txt'
 
-    def get_count(self):
-        f = open(self.count_file, 'r')
-        count = int(f.read())
-        f.close()
-        return count
-
-    def set_count(self, new):
-        count = self.get_count()
-        print(count)
-        f = open(self.count_file, 'w')
-        print(count)
-        f.write(new)
-        f.close()
-        return
+    def config_db(self):
+        return {
+            "apiKey": "AIzaSyCsWK-fZ8sQIg3ReJjderS58_b_hZSNjmg",
+            "authDomain": "mlticket-6a2a8.firebaseapp.com",
+            "databaseURL": "https://mlticket-6a2a8.firebaseio.com",
+            "storageBucket": "",
+        }
 
 if __name__ == "__main__":
     mc = MettleConfig()

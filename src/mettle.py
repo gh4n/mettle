@@ -6,7 +6,6 @@ from model_loader import ModelMethods
 
 
 class Mettle:
-
     def __init__(self):
         self.config = MettleConfig()
         self.db = self.autheticate()
@@ -15,19 +14,11 @@ class Mettle:
         self.listener = self.listen()
         self.model_loader = ModelMethods()
 
-    def config_db(self):
-        return {
-            "apiKey": "AIzaSyCsWK-fZ8sQIg3ReJjderS58_b_hZSNjmg",
-            "authDomain": "mlticket-6a2a8.firebaseapp.com",
-            "databaseURL": "https://mlticket-6a2a8.firebaseio.com",
-            "storageBucket": "",
-        }
-
     def autheticate(self):
         """
         Handles authentication and connection to firebaseDB
         """
-        self.firebase = pyrebase.initialize_app(self.config_db())
+        self.firebase = pyrebase.initialize_app(self.config.config_db())
         self.auth = self.firebase.auth()
         user = self.auth.sign_in_with_email_and_password(self.config.db_email, self.config.db_pwd)
         self.db = self.firebase.database()
@@ -71,6 +62,7 @@ class Mettle:
             # ticket sent to NN to be classified
             else:
                 message_str = self.process_message(message_str)
+                print(message_str)
                 classification = self.model_loader.classify(message_str)
                 self.db.child("tickets").child(id2).update({'prediction': classification[0]})
                 self.db.child("tickets").child(id2).update({'prediction': classification[0]})
@@ -96,19 +88,19 @@ class Mettle:
         message = re.sub(r'[0-9]{3}\w+', ' NUM', message)
         # cull unnecessary whitespaces
         message = re.sub(r' +', ' ', message)
+        # lowercase
+        message = message.lower()
         return message
-
-
 
     def incr_aggr(self, category):
         na = self.db.child("analytics").child("aggregate_all").get().val()
         print(na)
         na += 1
-        self.db.child("analytics").child("aggregate_all").update(na)
+        self.db.child("analytics").update({"aggregate_all":na})
 
         na_category = self.db.child("analytics").child("category_all").child(category).get().val()
         na_category += 1
-        self.db.child("analytics").child("category_all").child(category).update(na_category)
+        self.db.child("analytics").child("category_all").update({category:na_category})
         return
 
     def incr_corrected(self, category):
