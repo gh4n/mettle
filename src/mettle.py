@@ -49,22 +49,23 @@ class Mettle:
         )
 
     def stream_handler(self, message):
-        info = list(message['data'].keys())[0].split('/')
-        type = info[-1]
-        id = info[0]
-        # if type == "actual" or type == "category":
-        #     pass
-        if type == "resolved":
-            data = self.db.child("tickets").child(id).get()
-            data = data.val()
-            print(data)
-            self.add("archive", data)
-            self.db.child("tickets").child(id).remove()
-        else:
-            classification = self.classify(message)
-            self.update("tickets", {id + "/prediction" : classification})
-            return
+        print(message)
+        try:
+            info = list(message['data'].keys())[0].split('/')
+            type = info[-1]
+            id = info[0]
 
+            if type == "resolved":
+                data = self.db.child("tickets").child(id).get()
+                data = data.val()
+                self.add("archive", data)
+                self.db.child("tickets").child(id).remove()
+            else:
+                # classification = self.classify(message)
+                # self.update("tickets", {id + "/prediction" : classification})
+                return
+        except AttributeError:
+            pass
     def process_message(self, ticket):
         pass
 
