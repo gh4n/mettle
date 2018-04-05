@@ -4,9 +4,8 @@
     <list default="true" id="a5e8ea93-e809-4533-96fd-441f48ef7b2d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/mettle.py" afterPath="$PROJECT_DIR$/src/mettle.py" />
-      <change beforePath="$PROJECT_DIR$/starter-template/js/client.js" afterPath="$PROJECT_DIR$/starter-template/js/client.js" />
+      <change beforePath="$PROJECT_DIR$/src/model_loader.py" afterPath="$PROJECT_DIR$/src/model_loader.py" />
       <change beforePath="$PROJECT_DIR$/starter-template/js/support.js" afterPath="$PROJECT_DIR$/starter-template/js/support.js" />
-      <change beforePath="$PROJECT_DIR$/starter-template/support.html" afterPath="$PROJECT_DIR$/starter-template/support.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +17,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ml_ticket$test.coverage" NAME="test Coverage Results" MODIFIED="1522842827175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/ml_ticket$quick_start.coverage" NAME="quick_start Coverage Results" MODIFIED="1522854453405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/mettle$model_loader.coverage" NAME="model_loader Coverage Results" MODIFIED="1522906241152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/mettle$model_loader.coverage" NAME="model_loader Coverage Results" MODIFIED="1522912877718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/ml_ticket$database.coverage" NAME="database Coverage Results" MODIFIED="1522854159155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/ml_ticket$mettle.coverage" NAME="mettle Coverage Results" MODIFIED="1522822412224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
@@ -39,8 +38,8 @@
       <file leaf-file-name="mettle.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mettle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="747">
-              <caret line="62" column="34" lean-forward="false" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+            <state relative-caret-position="-932">
+              <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -62,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model_loader.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="model_loader.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model_loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+            <state relative-caret-position="400">
+              <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -77,20 +76,18 @@
       <file leaf-file-name="client.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/starter-template/client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-600">
-              <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-              <folding>
-                <marker date="1522910545892" expanded="true" signature="2660:2847" ph="..." />
-              </folding>
+            <state relative-caret-position="1440">
+              <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="support.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="support.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/starter-template/support.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
-              <caret line="61" column="45" lean-forward="false" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
+            <state relative-caret-position="359">
+              <caret line="55" column="29" lean-forward="true" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -99,8 +96,8 @@
       <file leaf-file-name="support.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/starter-template/js/support.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="219" column="147" lean-forward="false" selection-start-line="219" selection-start-column="147" selection-end-line="219" selection-end-column="147" />
+            <state relative-caret-position="-981">
+              <caret line="184" column="25" lean-forward="true" selection-start-line="184" selection-start-column="25" selection-end-line="184" selection-end-column="25" />
               <folding>
                 <element signature="e#2366#2690#0" expanded="false" />
                 <element signature="e#2722#3832#0" expanded="false" />
@@ -167,6 +164,7 @@
       <find>NAV</find>
       <find>test</find>
       <find>table</find>
+      <find>console</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -189,11 +187,11 @@
         <option value="$PROJECT_DIR$/src/mail_listener.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/starter-template/client.html" />
-        <option value="$PROJECT_DIR$/src/model_loader.py" />
         <option value="$PROJECT_DIR$/starter-template/js/client.js" />
-        <option value="$PROJECT_DIR$/src/mettle.py" />
         <option value="$PROJECT_DIR$/starter-template/support.html" />
         <option value="$PROJECT_DIR$/starter-template/js/support.js" />
+        <option value="$PROJECT_DIR$/src/mettle.py" />
+        <option value="$PROJECT_DIR$/src/model_loader.py" />
       </list>
     </option>
   </component>
@@ -513,7 +511,21 @@
       <option name="project" value="LOCAL" />
       <updated>1522906330629</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added correctness back into table">
+      <created>1522910934107</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1522910934107</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added correctness back into table">
+      <created>1522911530320</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1522911530320</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -522,8 +534,8 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30328396" sideWeight="0.501462" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40631038" sideWeight="0.49853802" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296845" sideWeight="0.49853802" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40631038" sideWeight="0.49853802" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20540889" sideWeight="0.49853802" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15423976" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -580,7 +592,8 @@
     <MESSAGE value="updated gitignore, more email parsing setup" />
     <MESSAGE value="updated gitignore, google api setup" />
     <MESSAGE value="updated support.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated support.js" />
+    <MESSAGE value="added correctness back into table" />
+    <option name="LAST_COMMIT_MESSAGE" value="added correctness back into table" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -775,16 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/starter-template/client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-600">
-          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <marker date="1522910545892" expanded="true" signature="2660:2847" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/starter-template/js/client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
@@ -793,30 +796,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model_loader.py">
+    <entry file="file://$PROJECT_DIR$/starter-template/support.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="359">
+          <caret line="55" column="29" lean-forward="true" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mettle.py">
+    <entry file="file://$PROJECT_DIR$/starter-template/client.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="62" column="34" lean-forward="false" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1440">
+          <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/starter-template/js/support.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="219" column="147" lean-forward="false" selection-start-line="219" selection-start-column="147" selection-end-line="219" selection-end-column="147" />
+        <state relative-caret-position="-981">
+          <caret line="184" column="25" lean-forward="true" selection-start-line="184" selection-start-column="25" selection-end-line="184" selection-end-column="25" />
           <folding>
             <element signature="e#2366#2690#0" expanded="false" />
             <element signature="e#2722#3832#0" expanded="false" />
@@ -824,11 +823,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/starter-template/support.html">
+    <entry file="file://$PROJECT_DIR$/src/mettle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="61" column="45" lean-forward="false" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
-          <folding />
+        <state relative-caret-position="-932">
+          <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model_loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
