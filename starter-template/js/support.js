@@ -241,4 +241,4 @@ function grabFirebaseData() {
 
 }
 
-grabFirebaseData()
+grabFirebaseData();

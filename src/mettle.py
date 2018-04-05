@@ -4,7 +4,7 @@ import time
 import imaplib
 import email
 from mettle_config import MettleConfig
-
+from queue import Queue
 
 # from model_loader import ModelMethods()
 
@@ -19,6 +19,7 @@ class Mettle:
         self.listener = None
         # self.email = self.config_email()
         # self.model_loader = ModelMethods()
+        self.model_queue = Queue()
 
     def config_db(self):
         return {
