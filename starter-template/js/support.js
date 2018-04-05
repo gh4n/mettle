@@ -206,26 +206,23 @@ function grabFirebaseData() {
     var db = firebase.database()
     var tickets_ref = db.ref('tickets/');
 
-    tickets_ref.orderByKey().once("value", function (snapshot) {
+    tickets_ref.on("value", function (snapshot) {
         var data = snapshot.val();
-        console.log(data);
-
-        var output = ""
+        var output = "";
         $.each(data, function (index, value) {
-            console.log(value);
             output += "<tr><td>" + value.name + "</td>";
             output += "<td>" + value.email + "</td>"
             output += "<td>" + value.desc + "</td>"
             output += "<td>" + value.prediction + "</td>"
             output += "<td><div class=\"switch\"><label>No<input type=\"checkbox\" checked><span class=\"lever\"></span>Yes</label></div></td></tr>"
-        })
-        document.getElementById("ticket_table").innerHTML = output;
+        });
+        document.getElementById("ticket_table").innerHTML += output;
         //dataTable
         $('#table_wrapper').DataTable();
 
-        tickets_ref.on("child_added", function (snapshot) {
-            console.log(snapshot.val())
-        })
+        // tickets_ref.on("child_added", function (snapshot) {
+        //     console.log(snapshot.val())
+        // })
     })
 
 }
