@@ -2,3 +2,5 @@ mettle_config.py
 google_api_key_s2t.json
 google-cloud-sdk
 *.json
+*.xml
+.idea

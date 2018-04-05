@@ -11,19 +11,24 @@ class ModelMethods:
         self.embedding_size = 100
         self.seq_len = 15
         self.categories = 7
+
+        # Load the deepdive cnn model
         self.deepdive_model = keras.models.load_model('../models/deepdive-cnn.h5')
+
+        # Unpickle our tokenizer
         with open('../models/tokenizer.pkl', 'rb') as f:
             self.tokenizer = pickle.load(f)
 
     @staticmethod
     def lookup_table(argument):
-        d = {0: 'Access Issues / Security Enablement',
-             1: 'Application',
-             2: 'H/W',
-             3: 'Job Failures',
-             4: 'N/W',
-             5: 'S/W',
-             }
+        d = {
+            0: 'Access Issues / Security Enablement',
+            1: 'Application',
+            2: 'H/W',
+            3: 'Job Failures',
+            4: 'N/W',
+            5: 'S/W',
+        }
         return d[argument]
 
     def condition_data(self, data):
