@@ -1,0 +1,9 @@
+Keras==2.1.5
+pyfiglet==0.7.5
+numpy==1.14.2
+pyttsx3==2.7
+httplib2==0.11.3
+Pyrebase==3.0.27
+tensorflow==1.7.0
+google_api_python_client==1.6.6
+protobuf==3.5.2.post1
