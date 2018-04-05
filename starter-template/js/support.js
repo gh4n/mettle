@@ -215,7 +215,17 @@ function grabFirebaseData() {
         });
         document.getElementById("ticket_table").innerHTML += output;
         //dataTable
-        $('#table_wrapper').DataTable();
+        $('#table_wrapper').DataTable(
+            {
+                "columns": [
+                  null,
+                  null,
+                  null,
+                  { "width": "20%" },
+                  { "width": "20%" },
+                ]
+              }
+        );
 
         //uncheck incorrect items
         $('input:checkbox').each(function () {
