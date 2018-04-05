@@ -1,25 +1,35 @@
 import keras
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
+import pickle
+import numpy as np
 
 
 class ModelMethods:
     def __init__(self):
-        self.vocab_size = 1500
+        self.vocab_size = 2000
         self.embedding_size = 100
         self.seq_len = 15
         self.categories = 7
-        self.deepdive_model = keras.models.load_model('rnn.h5')
+        self.deepdive_model = keras.models.load_model('../models/deepdive-cnn.h5')
+        with open('../models/tokenizer.pkl', 'rb') as f:
+            self.tokenizer = pickle.load(f)
+
+    @staticmethod
+    def lookup_table(argument):
+        d = {0: 'Access Issues / Security Enablement',
+             1: 'Application',
+             2: 'H/W',
+             3: 'Job Failures',
+             4: 'N/W',
+             5: 'S/W',
+             }
+        return d[argument]
 
     def condition_data(self, data):
-        print(data)
-        tokenizer = Tokenizer(num_words=self.vocab_size - 1, oov_token=None)
-        tokenizer.fit_on_texts(data)
         # tokenizer.texts_to_sequences(data)
         print(data)
-        x = pad_sequences(tokenizer.texts_to_sequences([data]), maxlen=self.seq_len)
-        print(x)
-        input('')
+        x = pad_sequences(self.tokenizer.texts_to_sequences([data]), maxlen=self.seq_len)
         return x
 
     def classify(self, data):
@@ -27,8 +37,11 @@ class ModelMethods:
         print(final_data)
 
         # This method takes in an input of an array of strings and outputs a prediction
-        return self.deepdive_model.predict(final_data)
+        output = self.deepdive_model.predict(final_data)
+        output = np.argmax(output[0])
+        return self.lookup_table(output)
 
 
 test = ModelMethods()
-test.classify('my access account inquiry')
+hello = test.classify('my access account inquiry')
+print(hello)
