@@ -203,30 +203,37 @@ function grabFirebaseData() {
     var db = firebase.database()
     var tickets_ref = db.ref('tickets/');
 
+     //dataTable
+     var dataTable = $('#table_wrapper').DataTable(
+        {
+         "columns": [
+           null,
+           null,
+           null,
+           { "width": "20%" },
+           { "width": "20%" },
+         ]
+       }
+     );
+
     tickets_ref.on("value", function (snapshot) {
         var data = snapshot.val();
         var output = "";
-        $.each(data, function (index, value) {
-            output += "<tr><td>" + value.name + "</td>";
-            output += "<td>" + value.email + "</td>"
-            output += "<td>" + value.desc + "</td>"
-            output += "<td>" + value.prediction + "</td>"
-            output += "<td><div class=\"switch\"><label>No<input type=\"checkbox\" checked><span class=\"lever\"></span>Yes</label></div></td></tr>"
-        });
-        document.getElementById("ticket_table").innerHTML += output;
-        //dataTable
-        $('#table_wrapper').DataTable(
-            {
-                "columns": [
-                  null,
-                  null,
-                  null,
-                  { "width": "20%" },
-                  { "width": "20%" },
-                ]
-              }
-        );
-
+        // $.each(data, function (index, value) {
+        //     output += "<tr><td>" + value.name + "</td>";
+        //     output += "<td>" + value.email + "</td>"
+        //     output += "<td>" + value.desc + "</td>"
+        //     output += "<td>" + value.prediction + "</td>"
+        //     output += "<td><div class=\"switch\"><label>No<input type=\"checkbox\" checked><span class=\"lever\"></span>Yes</label></div></td></tr>"
+        // });
+        // document.getElementById("ticket_table").innerHTML += output;
+        dataTable.row.add(
+            value.name,
+            value.email,
+            value.desc,
+            value.prediction,
+            
+        ).draw(false);
         //uncheck incorrect items
         $('input:checkbox').each(function () {
             $(this).change(
