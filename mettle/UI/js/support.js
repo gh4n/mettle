@@ -117,39 +117,39 @@
         //line chart
         var ctx = document.getElementById("myLineChart");
         var lineChartData = {
-            labels: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000],
+            labels: [4000, 8000, 12000, 16000],
             datasets: [{
-                data: [77, 78, 78, 79, 81, 82, 82, 84, 86, 89],
+                data: [98, 99, 99, 99],
                 label: 'Access Issues / Security Enablement',
                 borderColor: 'rgba(255, 159, 64, 0.7)',
                 fill: false
             }, {
-                data: [74, 74, 75, 79, 81, 82, 82, 84, 86, 90],
+                data: [93, 95, 96, 96],
                 label: 'Application',
                 borderColor: 'rgba(153, 102, 255, 0.7)',
                 fill: false
             }, {
-                data: [63, 65, 66, 66, 67, 72, 73, 76, 80, 82],
+                data: [77, 80, 85, 85],
                 label: 'H/W',
                 borderColor: 'rgba(75, 192, 192, 0.7)',
                 fill: false
             }, {
-                data: [67, 68, 69, 69, 72, 72, 73, 76, 80, 84],
+                data: [76, 86, 88, 89],
                 label: 'Job Failures',
                 borderColor: 'rgba(62, 39, 35, 0.7)',
                 fill: false
             }, {
-                data: [68, 69, 69, 70, 71, 72, 77, 78, 86, 87],
+                data: [75, 81, 85, 86],
                 label: 'N/W',
                 borderColor: 'rgba(255, 109, 0, 0.7)',
                 fill: false
             }, {
-                data: [56, 58, 59, 60, 61, 61, 75, 77, 77, 78],
+                data: [80, 80, 87, 89],
                 label: 'S/W',
                 borderColor: 'rgba(255, 23, 68, 0.7)',
                 fill: false
             }, {
-                data: [71, 72, 72, 76, 79, 81, 82, 84, 85, 86],
+                data: [94, 95, 96, 97],
                 label: 'Average',
                 borderColor: 'rgba(54, 162, 235, 0.7)',
                 fill: false
