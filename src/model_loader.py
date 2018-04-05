@@ -39,10 +39,11 @@ class ModelMethods:
 
     def classify(self, data):
         final_data = self.condition_data(data)
-
+        print(final_data)
         # This method takes in an input of an array of strings and outputs a prediction
         output = self.deepdive_model.predict(final_data)[0]
         output_max = np.argmax(output)
+        print(output_max)
         confidence = output[output_max]
 
         # We are returning (string, confidence)

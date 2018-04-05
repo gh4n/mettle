@@ -23,6 +23,11 @@
                 });
         });
 
+        //clicked confirm btn
+        $('input#confirm_btn').on("click", function(){
+           console.log("haha");
+        });
+
 
         //pie charts
         var ctx = document.getElementById("myPieChart");
@@ -228,5 +233,6 @@ function grabFirebaseData() {
     })
 
 }
+
 
 grabFirebaseData()

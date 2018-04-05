@@ -4,7 +4,7 @@ import time
 import imaplib
 import email
 from mettle_config import MettleConfig
-# from model_loader import ModelMethods()
+from model_loader import ModelMethods
 
 
 class Mettle:
@@ -14,9 +14,8 @@ class Mettle:
         self.db = self.autheticate()
         self.firebase = None
         self.auth = None
-        self.listener = None
-        # self.email = self.config_email()
-        # self.model_loader = ModelMethods()
+        self.listener = self.listen()
+        self.model_loader = ModelMethods()
 
     def config_db(self):
         return {
@@ -54,6 +53,7 @@ class Mettle:
             info = list(message['data'].keys())[0].split('/')
             type = info[-1]
             id = info[0]
+            message_str = message['data']['desc']
 
             if type == "resolved":
                 data = self.db.child("tickets").child(id).get()
@@ -61,11 +61,19 @@ class Mettle:
                 self.add("archive", data)
                 self.db.child("tickets").child(id).remove()
             else:
-                # classification = self.classify(message)
-                # self.update("tickets", {id + "/prediction" : classification})
+                print("hello")
+                classification = self.model_loader.classify(message_str)
+                print(classification)
+                self.update("tickets", {id + "/prediction" : classification[0]})
+                self.update("tickets", {id + "/confidence": classification[1]})
                 return
-        except AttributeError:
+        except AttributeError as e:
+            print(e)
             pass
+        except KeyError as e:
+            print(e)
+            pass
+
     def process_message(self, ticket):
         pass
 
