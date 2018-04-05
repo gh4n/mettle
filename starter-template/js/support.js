@@ -221,6 +221,10 @@ function grabFirebaseData() {
         document.getElementById("ticket_table").innerHTML = output;
         //dataTable
         $('#table_wrapper').DataTable();
+
+        tickets_ref.on("child_added", function(snapshot){
+            console.log(snapshot.val())
+        })
     })
 
 }

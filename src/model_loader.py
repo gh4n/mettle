@@ -42,9 +42,13 @@ class ModelMethods:
         print(final_data)
 
         # This method takes in an input of an array of strings and outputs a prediction
-        output = self.deepdive_model.predict(final_data)
-        output = np.argmax(output[0])
-        return self.lookup_table(output)
+        output = self.deepdive_model.predict(final_data)[0]
+        output_max = np.argmax(output)
+        confidence = output[output_max]
+
+        print(output_max, confidence)
+        # We are returning (string, confidence)
+        return self.lookup_table(output_max), confidence
 
 
 test = ModelMethods()
