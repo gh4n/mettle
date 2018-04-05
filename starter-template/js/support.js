@@ -11,19 +11,6 @@
             $(hidePage).addClass('hide');
         });
 
-        //uncheck incorrect items
-        $('input:checkbox').each(function () {
-            $(this).change(
-                function () {
-                    if (!$(this).is(':checked')) {
-                        $('select').formSelect();
-                        $('#modal').modal();
-                        $('#modal').modal('open');
-                    }
-                });
-        });
-
-
         //pie charts
         var ctx = document.getElementById("myPieChart");
         var pieChartData = {
@@ -222,6 +209,20 @@ function grabFirebaseData() {
         document.getElementById("ticket_table").innerHTML = output;
         //dataTable
         $('#table_wrapper').DataTable();
+
+        //uncheck incorrect items
+        $('input:checkbox').each(function () {
+            $(this).change(
+                function () {
+                    if (!$(this).is(':checked')) {
+                        $('select').formSelect();
+                        $('#modal').modal();
+                        $('#modal').modal('open');
+
+                        var confirmBtn = $('#modal').find('#confirm_btn');
+                    }
+                });
+        });
 
         tickets_ref.on("child_added", function (snapshot) {
             console.log(snapshot.val())

@@ -107,22 +107,24 @@
 <!--  Popups-->
 <div id="modal" class="modal">
     <div class="modal-content">
-        <div class="row">
-            <div class="input-field col s4">
-                <p>This ticket should goes to</p>
+       <form class="col s12">
+            <div class="row modal-form-row">
+                <div class="input-field col s4">
+                    <p>This ticket should goes to</p>
+                </div>
+                <div class="input-field col s8">
+                    <select>
+                        <option value="" disabled selected>Choose a category</option>
+                        <option value="1">Category 1</option>
+                        <option value="2">Category 2</option>
+                        <option value="3">Category 3</option>
+                    </select>
+                </div>
             </div>
-            <div class="input-field col s8">
-                <select>
-                    <option value="" disabled selected>Choose a category</option>
-                    <option value="1">Category 1</option>
-                    <option value="2">Category 2</option>
-                    <option value="3">Category 3</option>
-                </select>
-            </div>
-        </div>
+       </form>
     </div>
     <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-light btn">Confirm</a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-light btn" id="confirm_btn">Confirm</a>
     </div>
 </div>
 <!--  Scripts-->
