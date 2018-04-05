@@ -55,11 +55,20 @@ class Mettle:
             id = info[0]
             message_str = message['data']['desc']
 
+            # ticket resolved: archive ticket
             if type == "resolved":
                 data = self.db.child("tickets").child(id).get()
                 data = data.val()
                 self.add("archive", data)
                 self.db.child("tickets").child(id).remove()
+
+            # classifcation was manually updated, increment
+            if type == "actual":
+                data = self.db.child("tickets").child(id).get()
+                new_category = data["actual"]
+                self.analytics.incr(new_category)
+
+            # ticket sent to NN to be classified
             else:
                 print("hello")
                 classification = self.model_loader.classify(message_str)
@@ -73,6 +82,30 @@ class Mettle:
         except KeyError as e:
             print(e)
             pass
+
+    def incr_aggr(self, category):
+        na = self.db.child("analytics").child("aggregate_all").get()
+        na += 1
+        self.db.child("analytics").child("aggregate_all").update(na)
+
+        na_category = self.db.child("analytics").child("category_all").child(category).get()
+        na_category += 1
+        self.db.child("analytics").child("category_all").child(category).update(na_category)
+
+        return
+
+    def incr_corrected(self, category):
+        nc = self.db.child("analytics").child("aggregate_corrected").get()
+        nc += 1
+        self.db.child("analytics").child("aggregate_corrected").update(nc)
+
+        nc_category = self.db.child("analytics").child("category_corrected").child(category).get()
+        nc_category += 1
+        self.db.child("analytics").child("category_corrected").child(category).update(nc_category)
+        return
+
+
+
 
     def process_message(self, ticket):
         pass
