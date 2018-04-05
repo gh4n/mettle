@@ -45,7 +45,7 @@ class ModelMethods:
             output = self.deepdive_model.predict(final_data)[0]
         print(output)
         output_max = np.argmax(output)
-        confidence = output[output_max]
+        confidence = output[output_max + 1]
 
         # We are returning (string, confidence)
         return self.lookup_table(output_max), confidence
