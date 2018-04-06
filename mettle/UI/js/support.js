@@ -218,21 +218,6 @@ function grabFirebaseData() {
         }
     );
 
-    $('input:checkbox').each(function () {
-        $(this).change(
-            function () {
-                if (!$(this).is(':checked')) {
-                    $('select').formSelect();
-                    $('#modal').modal();
-                    $('#modal').modal('open');
-
-                    var confirmBtn = $('#modal').find('#confirm_btn');
-                    confirmBtn.on('click', function () {
-                        var actualCategory = $('#actualCategory_select').find('select').val();
-                    });
-                }
-            });
-    });
     tickets_ref.on("value", function (snapshot) {
         var data = snapshot.val();
         var output = "";
@@ -247,7 +232,7 @@ function grabFirebaseData() {
             output += "<td>" + value.email + "</td>";
             output += "<td>" + value.desc + "</td>";
             output += "<td>" + value.prediction + "</td>";
-            output += "<td><div class=\"switch\"><label>No<input type=\"checkbox\" checked><span class=\"lever\"></span>Yes</label></div></td></tr>"
+            output += "<td><div class=\"switch \"><label>No<input type=\"checkbox\" onchange=\"uncheckSwitchBox(this)\" href=\"#modal\" target=\"" + index + "\" prediction=\"" + value.prediction + "\" checked><span class=\"lever\"></span>Yes</label></div></td></tr>"
         });
         document.getElementById("ticket_table").innerHTML += output;
 
@@ -279,6 +264,24 @@ function grabFirebaseData() {
         // })
     })
 
+}
+
+function uncheckSwitchBox(element) {
+  if(!$(element).is(':checked')){
+    var dataIndex = $(element).attr("target");
+    var prediction = $(element).attr("prediction");
+    console.log(dataIndex);
+    console.log(prediction);
+    $('select').formSelect();
+    $('#modal').modal();
+    $('#modal').modal('open');
+
+    var confirmBtn = $('#modal').find('#confirm_btn');
+    confirmBtn.on('click', function () {
+        var actual = $('#actualCategory_select').find('select').val();
+        console.log(actual);
+    });
+  }
 }
 
 grabFirebaseData();
