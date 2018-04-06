@@ -222,8 +222,10 @@ function grabFirebaseData() {
                 null,
                 null,
                 null,
+                null,
                 {"width": "20%"},
                 {"width": "20%"},
+                null
             ],
             // "bDestroy": true,
             // "bServerSide": true,
@@ -258,6 +260,7 @@ function grabFirebaseData() {
         };
 
         document.getElementById("ticket_table").innerHTML = output;
+        console.log('table refreshed');
         console.log(data);
         $.each(data, function (index, value) {
             output += "<tr><td>" + value.name + "</td>";
@@ -265,39 +268,39 @@ function grabFirebaseData() {
             output += "<td style='text-align: left;'>" + value.desc + "</td>";
             output += "<td>" + value.prediction + "</td>";
             output += "<td>" + (value.confidence * 100).toFixed(2) + "%</td>";
-            output += "<td><div class=\"switch \"><label>No<input type=\"checkbox\" onchange=\"uncheckSwitchBox(this)\" href=\"#modal\" target=\"" + index + "\" prediction=\"" + value.prediction + "\" checked><span class=\"lever\"></span>Yes</label></div></td></tr>"
+            output += "<td><div class=\"switch \"><label>No<input type=\"checkbox\" onchange=\"uncheckSwitchBox(this)\" href=\"#modal\" target=\"" + index + "\" prediction=\"" + value.prediction + "\" checked><span class=\"lever\"></span>Yes</label></div></td>";
+            output += "<td><label><input type='checkbox' target=\"" + index + "\" onchange=\"resolveTicket(this)\" /><span></span></label></td></tr>";
 
-            analytics.total.total += 1
+            analytics.total.total += 1;
+            var category_int = mapping_table[value.prediction];
+            console.log(category_int);
+            // Make sure prediction is not NULL
+            if (category_int){
+                analytics.total[category_int] += 1
+            }
+            if (value.actual === "NULL"){
+                analytics.no_correct[category_int] += 1
+            }
 
         });
         document.getElementById("ticket_table").innerHTML += output;
-
         $('#table_wrapper').DataTable(
             {
                 "columns": [
                     null,
                     null,
                     null,
+                    null,
                     {"width": "20%"},
                     {"width": "20%"},
+                    null
                 ],
                 // "bDestroy": true,
                 // "bServerSide": true,
             }
         );
 
-        // dataTable.row.add([
-        //     data.name,
-        //     data.email,
-        //     data.desc,
-        //     data.prediction
-        //
-        // ]).draw(false);
-
-
-        // tickets_ref.on("child_added", function (snapshot) {
-        //     console.log(snapshot.val())
-        // })
+        console.log(analytics)
     })
 
 }
@@ -317,7 +320,21 @@ function uncheckSwitchBox(element) {
             var actual = $('#actualCategory_select').find('select').val();
             console.log(actual);
 
+
         });
+    }
+}
+
+function resolveTicket(element) {
+    if ($(element).is(':checked')) {
+        var dataIndex = $(element).attr("target");
+        console.log(dataIndex);
+
+        var db = firebase.database()
+        db.ref('tickets/' + dataIndex).update({
+            resolved: true
+        });
+
     }
 }
 
