@@ -268,7 +268,7 @@ function grabFirebaseData() {
             output += "<td>" + value.prediction + "</td>";
             output += "<td>" + (value.confidence * 100).toFixed(2) + "%</td>";
             output += "<td><div class=\"switch \"><label>No<input type=\"checkbox\" onchange=\"uncheckSwitchBox(this)\" href=\"#modal\" target=\"" + index + "\" prediction=\"" + value.prediction + "\" checked><span class=\"lever\"></span>Yes</label></div></td>";
-            output += "<td><label><input type='checkbox' /><span></span></label></td></tr>";
+            output += "<td><label><input type='checkbox' target=\"" + index + "\" onchange=\"resolveTicket(this)\" /><span></span></label></td></tr>";
 
             // analytics.total.total += 1;
             // var category_int = mapping_table[value.prediction];
@@ -320,6 +320,13 @@ function uncheckSwitchBox(element) {
             console.log(actual);
 
         });
+    }
+}
+
+function resolveTicket(element) {
+    if ($(element).is(':checked')) {
+        var dataIndex = $(element).attr("target");
+        console.log(dataIndex);
     }
 }
 
