@@ -20,9 +20,9 @@ function test() {
     db.ref().child('tickets').child(newPostKey).update(data_obj).then(function () {
         M.toast({html: 'Your ticket has been submitted successfully. We will get back to you as soon'})
 
-        // document.getElementById('name').value = "";
-        // document.getElementById('email').value = "";
-        // document.getElementById('shortDescription').value = ""
+        document.getElementById('name').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('shortDescription').value = ""
     });
 
     event.preventDefault();
