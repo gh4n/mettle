@@ -1,4 +1,5 @@
 var myPieChart;
+var stackedBar;
 
 (function ($) {
     $(function () {
@@ -107,7 +108,7 @@ var myPieChart;
             },
 
         };
-        var stackedBar = new Chart(ctx, {
+        stackedBar = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: labels,
@@ -282,9 +283,8 @@ function grabFirebaseData() {
             var category_int = mapping_table[value.prediction];
             console.log(category_int);
             // Make sure prediction is not NULL
-            if (category_int) {
-                analytics.total[category_int] += 1
-            }
+            analytics.total[category_int] += 1
+
             if (value.actual === "NULL") {
                 console.log('updating category');
                 analytics.no_correct.total += 1;
@@ -315,7 +315,23 @@ function grabFirebaseData() {
         myPieChart.config.data.datasets[0].data = [100 - percentage_correct, percentage_correct]
         myPieChart.update()
 
+        var category_correct = [];
+        var category_incorrect = [];
+        // var cat_0_pc = (analytics.no_correct[0]/analytics.total[0]) * 100;
+        // cat_0_pc.toFixed(2)
+
+        for (var i = 0; i < 6; i++) {
+            category_correct[i] = (analytics.no_correct[i] / analytics.total[i]) * 100;
+            category_correct[i].toFixed(2);
+            category_incorrect[i] = 100 - category_correct[i];
+        }
+
+        stackedBar.config.data.datasets[0].data = category_correct;
+        stackedBar.config.data.datasets[1].data = category_incorrect;
+        stackedBar.update()
+
         console.log(analytics)
+        console.log(category_correct)
     })
 
 }
