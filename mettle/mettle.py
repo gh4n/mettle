@@ -29,6 +29,7 @@ class Mettle:
         sweet backend UI
         """
         print(figlet_format('welcome to mettle', font='speed'))
+        print('version 2.4.1 by Ben Ong, Dan Xie, Grace Han')
 
     def authenticate(self):
         """
@@ -61,23 +62,20 @@ class Mettle:
         try:
             info = list(message['data'].keys())[0].split('/')
             type = info[-1]
-            print(type)
-            print(info)
             id = info[0]
             id2 = message['path']
 
             # ticket resolved: archive ticket
             if type == "resolved":
-                print("HELLO")
                 data = self.db.child("tickets").child(id2).get()
                 data = data.val()
                 self.add("archive", data)
                 self.db.child("tickets").child(id2).remove()
 
             # classification was manually updated, increment
-            if type == "actual":
-                data = self.db.child("tickets").child(id).get()
-                new_category = data["actual"]
+            # if type == "actual":
+                # data = self.db.child("tickets").child(id).get()
+                # new_category = data["actual"]
 
             # ticket sent to NN to be classified
             else:
@@ -89,12 +87,11 @@ class Mettle:
                     self.db.child("tickets").child(id2).update({'prediction': classification[0]})
                     self.db.child("tickets").child(id2).update({'confidence': float(classification[1])})
                     delimiter = "----------------------------------"
-                    print("\n{}\nID:{}\nMessage: {}\nPredicted Category: {}\nPrediction Confidence: {}\n{}".format
-                          (delimiter, id2[2:], message_str, str(classification[0]), str(classification[1]), delimiter))
+                    print("\nID:{}\nMessage: {}\nPredicted Category: {}\nPrediction Confidence: {}\n{}".format
+                          (id2[2:], message_str, str(classification[0]), str(classification[1]), delimiter))
                 except KeyError:
                     pass
         except AttributeError as a:
-            print(a)
             pass
         # except KeyError as e:
         #     print(e)
@@ -111,6 +108,7 @@ class Mettle:
 
 
     def process_message(self, message):
+        dirty = message
         regex = re.compile('[%s]' % re.escape(string.punctuation))
         # replace newlines
         message = regex.sub('', message)
@@ -122,6 +120,9 @@ class Mettle:
         message = re.sub(r' +', ' ', message)
         # lowercase
         message = message.lower()
+        delimiter = "----------------------------------"
+        print("{}\nMessage: {}\nCleaned Message: {}".format(delimiter, dirty, message))
+
         return message
 
 
