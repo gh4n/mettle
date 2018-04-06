@@ -56,19 +56,23 @@ class Mettle:
         )
 
     def stream_handler(self, message):
+        # print(message)
+        # print(message)
         try:
             info = list(message['data'].keys())[0].split('/')
             type = info[-1]
+            print(type)
+            print(info)
             id = info[0]
-            message_str = message['data']['desc']
             id2 = message['path']
 
             # ticket resolved: archive ticket
             if type == "resolved":
-                data = self.db.child("tickets").child(id).get()
+                print("HELLO")
+                data = self.db.child("tickets").child(id2).get()
                 data = data.val()
                 self.add("archive", data)
-                self.db.child("tickets").child(id).remove()
+                self.db.child("tickets").child(id2).remove()
 
             # classification was manually updated, increment
             if type == "actual":
@@ -77,19 +81,34 @@ class Mettle:
 
             # ticket sent to NN to be classified
             else:
-                message_str_clean = self.process_message(message_str)
-                classification = self.model_loader.classify(message_str_clean)
-                self.db.child("tickets").child(id2).update({'prediction': classification[0]})
-                self.db.child("tickets").child(id2).update({'prediction': classification[0]})
-                self.db.child("tickets").child(id2).update({'confidence': float(classification[1])})
-                delimiter = "----------------------------------"
-                print("\n{}\nID:{}\nMessage: {}\nPredicted Category: {}\nPrediction Confidence: {}\n{}".format
-                      (delimiter, id2[2:], message_str, str(classification[0]), str(classification[1]), delimiter))
-                return
-        except AttributeError:
+                try:
+                    message_str = message['data']['desc']
+                    message_str_clean = self.process_message(message_str)
+                    classification = self.model_loader.classify(message_str_clean)
+                    self.db.child("tickets").child(id2).update({'prediction': classification[0]})
+                    self.db.child("tickets").child(id2).update({'prediction': classification[0]})
+                    self.db.child("tickets").child(id2).update({'confidence': float(classification[1])})
+                    delimiter = "----------------------------------"
+                    print("\n{}\nID:{}\nMessage: {}\nPredicted Category: {}\nPrediction Confidence: {}\n{}".format
+                          (delimiter, id2[2:], message_str, str(classification[0]), str(classification[1]), delimiter))
+                except KeyError:
+                    pass
+        except AttributeError as a:
+            print(a)
             pass
-        except KeyError:
-            pass
+        # except KeyError as e:
+        #     print(e)
+        #     pass
+
+
+    # def output(self, case):
+    #     delimiter = "----------------------------------"
+    #     if case == "resolve":
+    #         print("\n{}\nID:{}\nMessage: {}\nPredicted Category: {}\nPrediction Confidence: {}\n{}".format)
+    #     if case == "add":
+    #
+    #     if case == "man_update":
+
 
     def process_message(self, message):
         regex = re.compile('[%s]' % re.escape(string.punctuation))
