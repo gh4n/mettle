@@ -1,3 +1,5 @@
+var myPieChart;
+
 (function ($) {
     $(function () {
 
@@ -44,7 +46,7 @@
                 }
             }
         };
-        var myPieChart = new Chart(ctx, {
+        myPieChart = new Chart(ctx, {
             type: 'pie',
             data: pieChartData,
             options: pieChartOptions
@@ -306,6 +308,12 @@ function grabFirebaseData() {
                 // "bServerSide": true,
             }
         );
+
+        var percentage_correct = (analytics.no_correct.total / analytics.total.total) * 100
+        percentage_correct = percentage_correct.toFixed(2);
+        console.log(percentage_correct)
+        myPieChart.config.data.datasets[0].data = [100 - percentage_correct, percentage_correct]
+        myPieChart.update()
 
         console.log(analytics)
     })
