@@ -47,7 +47,7 @@ class ModelMethods:
         confidence = output[output_max]
 
         # We are returning (string, confidence)
-        return self.lookup_table(output_max), confidence
+        return self.lookup_table(output_max + 1), confidence
 
 
 if __name__ == '__main__':
