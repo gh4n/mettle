@@ -199,6 +199,18 @@
     }); // end of document ready
 })(jQuery); // end of jQuery name spac
 
+var analytics = {}
+var mapping_table =
+    {
+        'Access Issues / Security Enablement': 0,
+        'Application': 1,
+        'H/W': 2,
+        'Job Failures': 3,
+        'Misc': 4,
+        'N/W': 5,
+        'S/W': 6
+    };
+
 function grabFirebaseData() {
     var db = firebase.database()
     var tickets_ref = db.ref('tickets/');
@@ -224,15 +236,39 @@ function grabFirebaseData() {
 
         //
         $("#table_wrapper").DataTable().clear().destroy();
+        analytics = {
+            total: {
+                total: 0,
+                0: 0,
+                1: 0,
+                2: 0,
+                3: 0,
+                4: 0,
+                5: 0
+            },
+            no_correct: {
+                total: 0,
+                0: 0,
+                1: 0,
+                2: 0,
+                3: 0,
+                4: 0,
+                5: 0
+            }
+        };
 
         document.getElementById("ticket_table").innerHTML = output;
         console.log(data);
         $.each(data, function (index, value) {
             output += "<tr><td>" + value.name + "</td>";
             output += "<td>" + value.email + "</td>";
-            output += "<td>" + value.desc + "</td>";
+            output += "<td style='text-align: left;'>" + value.desc + "</td>";
             output += "<td>" + value.prediction + "</td>";
+            output += "<td>" + (value.confidence * 100).toFixed(2) + "%</td>";
             output += "<td><div class=\"switch \"><label>No<input type=\"checkbox\" onchange=\"uncheckSwitchBox(this)\" href=\"#modal\" target=\"" + index + "\" prediction=\"" + value.prediction + "\" checked><span class=\"lever\"></span>Yes</label></div></td></tr>"
+
+            analytics.total.total += 1
+
         });
         document.getElementById("ticket_table").innerHTML += output;
 
@@ -267,21 +303,22 @@ function grabFirebaseData() {
 }
 
 function uncheckSwitchBox(element) {
-  if(!$(element).is(':checked')){
-    var dataIndex = $(element).attr("target");
-    var prediction = $(element).attr("prediction");
-    console.log(dataIndex);
-    console.log(prediction);
-    $('select').formSelect();
-    $('#modal').modal();
-    $('#modal').modal('open');
+    if (!$(element).is(':checked')) {
+        var dataIndex = $(element).attr("target");
+        var prediction = $(element).attr("prediction");
+        console.log(dataIndex);
+        console.log(prediction);
+        $('select').formSelect();
+        $('#modal').modal();
+        $('#modal').modal('open');
 
-    var confirmBtn = $('#modal').find('#confirm_btn');
-    confirmBtn.on('click', function () {
-        var actual = $('#actualCategory_select').find('select').val();
-        console.log(actual);
-    });
-  }
+        var confirmBtn = $('#modal').find('#confirm_btn');
+        confirmBtn.on('click', function () {
+            var actual = $('#actualCategory_select').find('select').val();
+            console.log(actual);
+
+        });
+    }
 }
 
 grabFirebaseData();

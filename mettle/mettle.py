@@ -6,7 +6,6 @@ Mettle
 @modified 05/01/18
 """
 
-
 import pyrebase
 import string
 import re
@@ -82,8 +81,8 @@ class Mettle:
                 classification = self.model_loader.classify(message_str_clean)
                 self.db.child("tickets").child(id2).update({'prediction': classification[0]})
                 self.db.child("tickets").child(id2).update({'prediction': classification[0]})
-                self.db.child("tickets").child(id2).update({'confidence':float(classification[1])})
-                delimiter="----------------------------------"
+                self.db.child("tickets").child(id2).update({'confidence': float(classification[1])})
+                delimiter = "----------------------------------"
                 print("\n{}\nID:{}\nMessage: {}\nPredicted Category: {}\nPrediction Confidence: {}\n{}".format
                       (delimiter, id2[2:], message_str, str(classification[0]), str(classification[1]), delimiter))
                 return
@@ -91,7 +90,6 @@ class Mettle:
             pass
         except KeyError:
             pass
-
 
     def process_message(self, message):
         regex = re.compile('[%s]' % re.escape(string.punctuation))
@@ -107,7 +105,6 @@ class Mettle:
         message = message.lower()
         return message
 
+
 if __name__ == "__main__":
     mettle = Mettle()
-
-
