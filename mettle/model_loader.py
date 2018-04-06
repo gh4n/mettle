@@ -16,7 +16,6 @@ class ModelMethods:
         # Load the deepdive cnn model
         self.deepdive_model = keras.models.load_model('../models/deepdive-cnn2.h5')
         self.graph = get_default_graph()
-        self.deepdive_model.summary()
         # Unpickle our tokenizer
         with open('../models/tokenizer.pkl', 'rb') as f:
             self.tokenizer = pickle.load(f)
