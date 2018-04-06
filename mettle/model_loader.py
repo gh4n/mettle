@@ -14,7 +14,7 @@ class ModelMethods:
         self.categories = 7
 
         # Load the deepdive cnn model
-        self.deepdive_model = keras.models.load_model('../models/deepdive-cnn.h5')
+        self.deepdive_model = keras.models.load_model('../models/deepdive-cnn2.h5')
         self.graph = get_default_graph()
         # Unpickle our tokenizer
         with open('../models/tokenizer.pkl', 'rb') as f:
@@ -47,7 +47,7 @@ class ModelMethods:
         confidence = output[output_max]
 
         # We are returning (string, confidence)
-        return self.lookup_table(output_max + 1), confidence
+        return self.lookup_table(output_max), confidence
 
 
 if __name__ == '__main__':
