@@ -1,7 +1,10 @@
+import os
+os.environ["TF_CPP_MIN_LOG_LEVEL"]="3"
 import keras
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 import pickle
+
 import numpy as np
 from tensorflow import get_default_graph
 
