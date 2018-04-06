@@ -206,9 +206,8 @@ var mapping_table =
         'Application': 1,
         'H/W': 2,
         'Job Failures': 3,
-        'Misc': 4,
-        'N/W': 5,
-        'S/W': 6
+        'N/W': 4,
+        'S/W': 5
     };
 
 function grabFirebaseData() {
@@ -255,7 +254,7 @@ function grabFirebaseData() {
                 2: 0,
                 3: 0,
                 4: 0,
-                5: 0
+                5: 0,
             }
         };
 
@@ -268,17 +267,25 @@ function grabFirebaseData() {
             output += "<td style='text-align: left;'>" + value.desc + "</td>";
             output += "<td>" + value.prediction + "</td>";
             output += "<td>" + (value.confidence * 100).toFixed(2) + "%</td>";
-            output += "<td><div class=\"switch \"><label>No<input type=\"checkbox\" onchange=\"uncheckSwitchBox(this)\" href=\"#modal\" target=\"" + index + "\" prediction=\"" + value.prediction + "\" checked><span class=\"lever\"></span>Yes</label></div></td>";
+            if (value.actual === "NULL") {
+                output += "<td><div class=\"switch \"><label>No<input type=\"checkbox\" onchange=\"uncheckSwitchBox(this)\" href=\"#modal\" target=\"" + index + "\" prediction=\"" + value.prediction + "\" checked><span class=\"lever\"></span>Yes</label></div></td>";
+            }
+            else {
+                output += "<td><div class=\"switch \"><label>No<input type=\"checkbox\" onchange=\"uncheckSwitchBox(this)\" href=\"#modal\" target=\"" + index + "\" prediction=\"" + value.prediction + "\"><span class=\"lever\"></span>Yes</label></div></td>";
+
+            }
             output += "<td><label><input type='checkbox' target=\"" + index + "\" onchange=\"resolveTicket(this)\" /><span></span></label></td></tr>";
 
             analytics.total.total += 1;
             var category_int = mapping_table[value.prediction];
             console.log(category_int);
             // Make sure prediction is not NULL
-            if (category_int){
+            if (category_int) {
                 analytics.total[category_int] += 1
             }
-            if (value.actual === "NULL"){
+            if (value.actual === "NULL") {
+                console.log('updating category');
+                analytics.no_correct.total += 1;
                 analytics.no_correct[category_int] += 1
             }
 
@@ -306,9 +313,11 @@ function grabFirebaseData() {
 }
 
 function uncheckSwitchBox(element) {
+    var db = firebase.database();
+    var dataIndex = $(element).attr("target");
+    var prediction = $(element).attr("prediction");
+
     if (!$(element).is(':checked')) {
-        var dataIndex = $(element).attr("target");
-        var prediction = $(element).attr("prediction");
         console.log(dataIndex);
         console.log(prediction);
         $('select').formSelect();
@@ -317,10 +326,18 @@ function uncheckSwitchBox(element) {
 
         var confirmBtn = $('#modal').find('#confirm_btn');
         confirmBtn.on('click', function () {
-            var actual = $('#actualCategory_select').find('select').val();
-            console.log(actual);
+            var corrected = $('#actualCategory_select').find('select').val();
+            console.log(corrected);
+            db.ref('tickets/' + dataIndex).update({
+                actual: corrected
+            });
+            $('select').val("");
 
-
+        });
+    }
+    else {
+        db.ref('tickets/' + dataIndex).update({
+            actual: "NULL"
         });
     }
 }
